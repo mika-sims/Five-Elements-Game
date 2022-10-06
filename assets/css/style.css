@@ -83,3 +83,70 @@ h2 {
     font-size: 1.4em;
   }
 }
+
+/* Main page section */
+.main__page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 0 1em;
+}
+
+.page__heading {
+  color: #e9f3ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.7em;
+}
+
+.main__page > aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.main__page-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.main__page-icons {
+  width: 50px;
+}
+
+.main__page-text-content {
+  color: #f0f0f0;
+}
+
+.open__gameboard-btn {
+  background: #e9f3ff;
+  color: #28456b;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2em 1em;
+  margin-top: 2em;
+  animation: pop-out 2s ease-in-out infinite;
+}
+
+@keyframes pop-out {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.main__page-bg-img {
+  width: 180px;
+}
