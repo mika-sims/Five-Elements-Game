@@ -44,6 +44,7 @@ h2 {
   gap: 2em;
   background: radial-gradient(#28456b, #1b1c47) no-repeat center;
   transition: opacity 0.5s, visibility 0.5s;
+  z-index: 999;
 }
 
 .preloader__img {
