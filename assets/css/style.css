@@ -196,8 +196,9 @@ h2 {
 }
 
 /* MODALS */
-/* Welcome modal */
-.welcome__modal-container {
+/* Welcome and Rules modals global styles*/
+.welcome__modal-container,
+.rules__modal-container {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -210,6 +211,15 @@ h2 {
   justify-content: center;
 }
 
+.welcome__modal-x-mark,
+.rules__modal-x-mark {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 25px;
+}
+
+/* Welcome modal */
 .welcome__modal {
   position: relative;
   width: 300px;
@@ -224,7 +234,8 @@ h2 {
   text-align: center;
 }
 
-.welcome__modal-x-mark {
+.welcome__modal-x-mark,
+.rules__modal-x-mark {
   position: absolute;
   right: 1em;
   top: 1em;
@@ -290,6 +301,33 @@ h2 {
     /* border: 2px solid #1b1c47; */
     background: #454792;
   }
+}
+
+/* Rules modal */
+.rules__modal {
+  position: relative;
+  width: 300px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 1em;
+  background: #e9f3ff;
+  gap: 1em;
+}
+
+.rules__modal h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.rules__img {
+  width: 160px;
+}
+
+.rule {
+  font-size: 0.8em;
 }
 
 /* footer section */
