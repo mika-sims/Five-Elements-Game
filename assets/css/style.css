@@ -353,7 +353,6 @@ h2 {
 
 /* Scoreboard section */
 .scoreboard {
-  position: absolute;
   top: 0;
   width: 100%;
   padding-top: 1em;
@@ -452,13 +451,75 @@ h2 {
   }
 }
 
+/* Playground section */
+.playground {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user__options-container {
+  /* margin: 0 auto; */
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/playground_bg.svg") no-repeat center;
+  background-size: 70%;
+}
+
+.user__option {
+  position: absolute;
+}
+
+.user__option-img {
+  width: 70%;
+  pointer-events: none;
+}
+
+#fire {
+  top: 1em;
+}
+
+#wood {
+  right: 0;
+  top: 6.5em;
+}
+#earth {
+  left: 0;
+  top: 6.5em;
+}
+
+#metal {
+  bottom: 2em;
+  left: 3em;
+}
+
+#water {
+  bottom: 2em;
+  right: 3em;
+}
+
+.playground__rules-btn {
+  background: #e9f3ff;
+  color: #28456b;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2em 1em;
+  margin-top: 1em;
+}
+
 /* footer section */
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5em;
-  margin-top: 1em;
+  margin-top: 3em;
 }
 
 .social__media-icon {
