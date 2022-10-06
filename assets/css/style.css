@@ -15,7 +15,37 @@ body {
   right: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: black;
+  gap: 2em;
+  background: radial-gradient(#28456b, #1b1c47) no-repeat center;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.preloader__img {
+  width: 100px;
+  animation: fade-in-fade-out 1s ease-in-out infinite;
+}
+
+p {
+  color: aliceblue;
+  animation: fade-in-fade-out 1s ease-in-out infinite;
+}
+
+.hide__preloader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes fade-in-fade-out {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
