@@ -13,14 +13,14 @@
 
 <body>
   <!-- Page preloader section -->
-  <div class="preloader">
+  <div class="preloader hide">
     <div class="img__container">
       <img class="preloader__img" src="assets/images/fire.svg" alt="">
     </div>
     <p class="loading__text">Loading...</p>
   </div>
   <!-- Main page section -->
-  <section class="main__page">
+  <section class="main__page hide">
     <header class="header">
       <h1 class="page__heading"> Five elements game</h1>
     </header>
@@ -37,6 +37,24 @@
     </aside>
     <button type="button" class="open__gameboard-btn">Let's Play</button>
     <img class="main__page-bg-img" src="assets/images/main_page_bg.svg" alt="">
+  </section>
+  <!-- Game board section -->
+  <section class="game__board">
+    <!-- Welcome modal -->
+    <div class="welcome__modal-container">
+      <div class="welcome__modal hide">
+        <img class="welcome__modal-x-mark" src="assets/images/x-mark.svg" alt="x-mark icon">
+        <h2>Welcome to the Five Elements Game</h2>
+        <p><span>Before starting; </span></p>
+        <p>Do you want to take a look at the rules of the game?</p>
+        <p>or</p>
+        <p>Do you want to start playing right away?</p>
+        <div class="welcome__modal-buttons">
+          <button type="button" class="rules__btn">RULES</button>
+          <button type="button" class="play__btn">PLAY</button>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- Footer section -->
   <footer class="footer">
