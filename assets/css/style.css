@@ -513,6 +513,55 @@ h2 {
   margin-top: 1em;
 }
 
+/* Playground section media query */
+@media screen and (min-width: 600px) {
+  .user__options-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .user__option-img {
+    width: 95%;
+  }
+
+  #fire {
+    top: 1em;
+  }
+
+  #wood {
+    right: 1.5em;
+    top: 8em;
+  }
+  #earth {
+    left: 1.5em;
+    top: 8em;
+  }
+
+  #metal {
+    bottom: 3em;
+    left: 4.5em;
+  }
+
+  #water {
+    bottom: 3em;
+    right: 4.5em;
+  }
+
+  .playground__rules-btn {
+    background: #e9f3ff;
+    color: #28456b;
+    font-size: 1.3em;
+    padding: 0.2em 1.2em;
+    margin-top: 2em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .playground__rules-btn:hover {
+    transform: scale(1.1);
+  }
+}
+
 /* footer section */
 .footer {
   display: flex;
