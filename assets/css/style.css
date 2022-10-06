@@ -365,7 +365,6 @@ h2 {
 
 .game__heading {
   line-height: 2em;
-  color: #d8dbdd;
   font-size: 1.2em;
   animation: color-change 4s linear infinite;
 }
@@ -425,6 +424,34 @@ h2 {
   font-size: 1.2em;
   font-weight: 600;
 }
+
+/* Scoreboard section media query */
+@media screen and (min-width: 600px) {
+  .game__heading {
+    font-size: 2.2em;
+  }
+  .scoreboard__container {
+    width: 320px;
+    height: 90px;
+    border: 2px solid #28456b;
+  }
+
+  .user_score-table,
+  .cpu__score-table {
+    width: 40%;
+  }
+
+  .user__name,
+  .cpu__name {
+    font-size: 1.5em;
+  }
+
+  .user__score,
+  .cpu__score {
+    font-size: 1.5em;
+  }
+}
+
 /* footer section */
 .footer {
   display: flex;
