@@ -619,7 +619,46 @@ h2 {
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 700;
-  cursor: pointer;
+}
+
+/* Result board section media queries */
+@media screen and (min-width: 600px) {
+  .result__board {
+    width: 500px;
+    height: 450px;
+  }
+
+  .round__container {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  .choices__container {
+    justify-content: space-between;
+  }
+
+  .user__indicator,
+  .cpu__indicator {
+    font-size: 1.5em;
+  }
+
+  .user__choice,
+  .cpu__choice {
+    width: 120px;
+    height: 120px;
+  }
+
+  .result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+  }
+
+  .next__btn {
+    font-size: 1.3em;
+  }
 }
 
 /* footer section */
