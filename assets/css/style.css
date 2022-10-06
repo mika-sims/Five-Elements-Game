@@ -14,6 +14,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -48,7 +51,7 @@ h2 {
   animation: fade-in-fade-out 1s ease-in-out infinite;
 }
 
-p {
+.loading__text {
   color: aliceblue;
   animation: fade-in-fade-out 1s ease-in-out infinite;
 }
@@ -67,5 +70,16 @@ p {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .preloader__img {
+    width: 150px;
+    animation: fade-in-fade-out 1s ease-in-out infinite;
+  }
+
+  p {
+    font-size: 1.4em;
   }
 }
