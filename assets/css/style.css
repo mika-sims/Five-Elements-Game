@@ -72,7 +72,7 @@ h2 {
     opacity: 0;
   }
 }
-
+/* Page preloader media query */
 @media screen and (min-width: 600px) {
   .preloader__img {
     width: 150px;
