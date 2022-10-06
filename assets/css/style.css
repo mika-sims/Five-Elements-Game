@@ -548,10 +548,7 @@ h2 {
   }
 
   .playground__rules-btn {
-    background: #e9f3ff;
-    color: #28456b;
     font-size: 1.3em;
-    padding: 0.2em 1.2em;
     margin-top: 2em;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -560,6 +557,69 @@ h2 {
   .playground__rules-btn:hover {
     transform: scale(1.1);
   }
+}
+
+/* Result board section */
+.result__board {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.round__container {
+  color: #d8dbdd;
+  background: #126d74;
+  padding: 0.2em 1em;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.choices__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user__choice-container,
+.cpu__choice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.user__indicator,
+.cpu__indicator {
+  color: #cecece;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.user__selection-img,
+.cpu__selection-img {
+  width: 100%;
+}
+
+.result {
+  color: #d8dbdd;
+  font-size: 1.7em;
+  word-spacing: 10px;
+}
+
+.next__btn {
+  color: #315079;
+  background: #d8dbdd;
+  padding: 0.2em 1em;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* footer section */
