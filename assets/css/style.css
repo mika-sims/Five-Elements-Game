@@ -428,7 +428,7 @@ h2 {
 /* Scoreboard section media query */
 @media screen and (min-width: 600px) {
   .game__heading {
-    font-size: 2.2em;
+    font-size: 2em;
   }
   .scoreboard__container {
     width: 320px;
