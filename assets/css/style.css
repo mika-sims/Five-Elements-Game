@@ -330,6 +330,27 @@ h2 {
   font-size: 0.8em;
 }
 
+/* Welcome modal media query */
+@media screen and (min-width: 600px) {
+  .rules__modal {
+    width: 500px;
+    height: 600px;
+    gap: 1em;
+  }
+
+  .rules__modal h2 {
+    font-size: 1.3em;
+  }
+
+  .rules__img {
+    width: 240px;
+  }
+
+  .rule {
+    font-size: 1em;
+  }
+}
+
 /* footer section */
 .footer {
   display: flex;
