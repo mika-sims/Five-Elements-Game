@@ -1,16 +1,33 @@
 /* Import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
+/* GLOBAL STYLES */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
   background: radial-gradient(#28456b, #1b1c47) no-repeat center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
 }
 
+button {
+  background: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Page preloader section */
 .preloader {
   position: fixed;
   top: 0;
