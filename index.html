@@ -39,10 +39,10 @@
     <img class="main__page-bg-img" src="assets/images/main_page_bg.svg" alt="">
   </section>
   <!-- Game board section -->
-  <section class="game__board">
+  <section class="modals">
     <!-- Welcome modal -->
-    <div class="welcome__modal-container">
-      <div class="welcome__modal hide">
+    <div class="welcome__modal-container hide">
+      <div class="welcome__modal">
         <img class="welcome__modal-x-mark" src="assets/images/x-mark.svg" alt="x-mark icon">
         <h2>Welcome to the Five Elements Game</h2>
         <p><span>Before starting; </span></p>
@@ -55,7 +55,8 @@
         </div>
       </div>
     </div>
-    <div class="rules__modal-container">
+    <!-- Rules modal -->
+    <div class="rules__modal-container hide">
       <div class="rules__modal">
         <img class="rules__modal-x-mark" src="assets/images/x-mark.svg" alt="x-mark icon">
         <h2>Five Elements Game Rules</h2>
@@ -72,6 +73,20 @@
           <li class="rule">Earth restrains water</li>
           <li class="rule">Water restrains Fire</li>
         </ul>
+      </div>
+    </div>
+  </section>
+  <!-- Scoreboard section -->
+  <section class="scoreboard">
+    <h1 class="game__heading">FIRE WOOD WATER METAL EARTH</h1>
+    <div class="scoreboard__container">
+      <div class="user_score-table">
+        <h2 class="user__name">You</h2>
+        <p class="user__score">0</p>
+      </div>
+      <div class="cpu__score-table">
+        <p class="cpu__score">0</p>
+        <h2 class="cpu__name">Cpu</h2>
       </div>
     </div>
   </section>
