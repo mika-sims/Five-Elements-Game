@@ -40,12 +40,12 @@ p {
 
 @keyframes fade-in-fade-out {
   0% {
-    opacity: 1;
-  }
-  35% {
     opacity: 0;
   }
-  100% {
+  35% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
