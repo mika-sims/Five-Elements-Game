@@ -100,6 +100,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.7em;
+  margin-top: 1em;
 }
 
 .main__page > aside {
@@ -155,6 +156,7 @@ h2 {
 @media screen and (min-width: 600px) {
   .page__heading {
     font-size: 2.5em;
+    margin-top: 1em;
   }
 
   .main__page-icons-container {
@@ -186,19 +188,7 @@ h2 {
     color: #e9f3ff;
   }
 
-  @keyframes pop-out {
-    0% {
-      transform: scale(1.1);
-    }
-    50% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.1);
-    }
-  }
-
   .main__page-bg-img {
-    width: 180px;
+    width: 300px;
   }
 }
