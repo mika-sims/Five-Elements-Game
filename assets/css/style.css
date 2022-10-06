@@ -459,7 +459,6 @@ h2 {
   justify-content: center;
 }
 .user__options-container {
-  /* margin: 0 auto; */
   position: relative;
   width: 300px;
   height: 300px;
@@ -561,13 +560,19 @@ h2 {
 
 /* Result board section */
 .result__board {
-  position: relative;
-  width: 300px;
-  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.result__board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: 300px;
+  height: 300px;
 }
 
 .round__container {
@@ -581,83 +586,88 @@ h2 {
 .choices__container {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
 
 .user__choice-container,
 .cpu__choice-container {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 0.5em;
 }
 
-.user__indicator,
-.cpu__indicator {
+.chooser {
   color: #cecece;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 700;
 }
 
-.user__selection-img,
-.cpu__selection-img {
-  width: 100%;
-}
-
-.result {
+.result__text {
   color: #d8dbdd;
-  font-size: 1.7em;
+  font-size: 1.8em;
   word-spacing: 10px;
 }
 
-.next__btn {
+.next__game-btn {
   color: #315079;
   background: #d8dbdd;
-  padding: 0.2em 1em;
+  padding: 0.3em 1em;
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 700;
+  cursor: pointer;
 }
 
-/* Result board section media queries */
+/* Result boartd section media query */
 @media screen and (min-width: 600px) {
-  .result__board {
-    width: 500px;
-    height: 450px;
+  .result__board-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
   }
 
   .round__container {
-    font-size: 1.2em;
-    font-weight: 500;
+    font-size: 1.3em;
   }
 
   .choices__container {
-    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    gap: 12em;
   }
 
-  .user__indicator,
-  .cpu__indicator {
-    font-size: 1.5em;
+  .chooser {
+    color: #cecece;
+    font-size: 1.1em;
+    font-weight: 700;
   }
 
-  .user__choice,
-  .cpu__choice {
-    width: 120px;
-    height: 120px;
+  .user__choice-img,
+  .cpu__choice-img {
+    width: 110%;
   }
 
-  .result {
+  .result__text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
+    top: 5.4em;
+    font-size: 2.2em;
   }
 
-  .next__btn {
-    font-size: 1.3em;
+  .next__game-btn {
+    color: #315079;
+    background: #d8dbdd;
+    padding: 0.3em 1em;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .next__game-btn:hover {
+    transform: scale(1.1);
   }
 }
 
