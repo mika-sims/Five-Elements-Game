@@ -92,6 +92,7 @@ h2 {
   justify-content: center;
   gap: 1em;
   padding: 0 1em;
+  text-align: center;
 }
 
 .page__heading {
@@ -149,4 +150,55 @@ h2 {
 
 .main__page-bg-img {
   width: 180px;
+}
+/* Main page media query */
+@media screen and (min-width: 600px) {
+  .page__heading {
+    font-size: 2.5em;
+  }
+
+  .main__page-icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .main__page-icons {
+    width: 80px;
+  }
+
+  .main__page-text-content {
+    color: #f0f0f0;
+    font-size: 1.2em;
+  }
+
+  .open__gameboard-btn {
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    height: 40px;
+  }
+
+  .open__gameboard-btn:hover {
+    border: 1px solid #e9f3ff;
+    background: none;
+    color: #e9f3ff;
+  }
+
+  @keyframes pop-out {
+    0% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  .main__page-bg-img {
+    width: 180px;
+  }
 }
