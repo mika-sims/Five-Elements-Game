@@ -280,6 +280,14 @@ function renderUserScore() {
   userScoreBoard.innerHTML = `${userScore}`;
 }
 
+/**
+ * Count the CPU score
+ */
+function countCpuScore() {
+  cpuScore += 1;
+  return cpuScore;
+}
+
 
 
 
