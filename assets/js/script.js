@@ -186,8 +186,12 @@ function getCpuChoice() {
   return computerChoice;
 }
 
-
-
+/**
+ * Render CPU choice
+ */
+function renderCpuChoice(choice) {
+  cpuSelectedImg.src = options[choice];
+}
 
 /**
  * Play the game functionality. After the user makes choice, all other functions are executed within the playGame function.
@@ -197,5 +201,6 @@ function playGame(e) {
   let userChoice = getUserChoice(e);
   renderUserChoice(userChoice);
   let cpuChoice = getCpuChoice();
+  renderCpuChoice(cpuChoice);
   openResultBoard();
 }
