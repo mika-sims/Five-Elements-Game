@@ -2,6 +2,11 @@
 /*========== GLOBAL VARIABLES ==========*/
 const openPlaygroundPageBtn = document.querySelector(".open__playground-btn");
 const rulesButtons = document.querySelectorAll(".rules__btn");
+const rulesModalxMark = document.querySelector(".rules__modal-x-mark");
+const rulesModalContainer = document.querySelector(".rules__modal-container");
+const rulesModal = document.querySelector(".rules__modal");
+
+/*========== EVENT LISTENERS ==========*/
 
 // Object of options and their sources
 const options = {
@@ -52,13 +57,28 @@ let preloaderInterval = setInterval(preloader, 1000);
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
 
 function openRulesModal() {
-  // Get elements from DOM
-  const rulesModalContainer = document.querySelector(".rules__modal-container");
-  const rulesModal = document.querySelector(".rules__modal");
-
   rulesModalContainer.classList.remove("hide");
+  rulesModal.classList.remove("animate__fadeOutDownBig");
   rulesModal.classList.add("animate__fadeInDownBig");
 }
+
+rulesModalxMark.addEventListener("click", closeRulesModal);
+
+function closeRulesModal() {
+  rulesModal.classList.remove("animate__fadeInDownBig");
+  rulesModal.classList.add("animate__fadeOutDownBig");
+  setTimeout(() => {
+    rulesModalContainer.classList.add("hide");
+  }, 400);
+}
+
+window.addEventListener("click", e => {
+  if (e.target === rulesModalContainer) {
+    closeRulesModal();
+  }
+});
+
+
 /*========== PAGE TRANSITION FROM MAIN PAGE TO PLAYGROUND PAGE FUNCTIONALITY ==========*/
 
 /**
