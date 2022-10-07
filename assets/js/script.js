@@ -129,7 +129,6 @@ function openPlaygroundBoard() {
   }, 500);
 }
 
-
 /**
  * Provide transition from playground board to result board
  */
@@ -159,11 +158,16 @@ function nextRound() {
   }, 750);
 }
 
+function getUserChoice(e) {
+  let userSelected = e.target.id;
+  return userSelected;
+}
 
 
 /**
  * Play the game functionality. After the user makes choice, all other functions are executed within the playGame function.
  */
-function playGame() {
+function playGame(e) {
+  getUserChoice(e);
   openResultBoard();
 }
