@@ -20,6 +20,7 @@ const nextGameBtn = document.querySelector(".next__game-btn");
 const userSelectedImg = document.querySelector(".user__choice-img");
 const cpuSelectedImg = document.querySelector(".cpu__choice-img");
 const resultText = document.querySelector(".result__text");
+let roundCounter = 0;
 
 /*========== EVENT LISTENERS ==========*/
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
@@ -187,6 +188,7 @@ function getCpuChoice() {
   // Generate random computer choice
   let randomChoice = Math.floor(Math.random() * cpuOptions.length);
   let cpuChoice = cpuOptions[randomChoice];
+  countRounds();
   return cpuChoice;
 }
 
@@ -222,8 +224,22 @@ function roundWinner(user, cpu) {
   else {
     return "cpu";
   }
-
 }
+
+/**
+ * Count the rounds
+ */
+function countRounds() {
+  roundCounter += 1;
+  console.log(roundCounter);
+  return roundCounter;
+}
+
+
+
+
+
+
 
 /**
  * Render round winner
