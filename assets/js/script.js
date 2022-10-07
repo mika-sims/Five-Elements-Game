@@ -194,6 +194,46 @@ function renderCpuChoice(choice) {
 }
 
 /**
+ * Get round winner
+ */
+function roundWinner(user, cpu) {
+  if (user === "fire" && cpu === "wood" || user === "fire" && cpu === "metal") {
+    return "user";
+  }
+  else if (user === "wood" && cpu === "water" || user === "wood" && cpu === "earth") {
+    return "user";
+  }
+  else if (user === "water" && cpu === "metal" || user === "water" && cpu === "fire") {
+    return "user";
+  }
+  else if (user === "metal" && cpu === "earth" || user === "metal" && cpu === "wood") {
+    return "user";
+  }
+  else if (user === "earth" && cpu === "fire" || user === "earth" && cpu === "water") {
+    return "user";
+  }
+  else if (cpu === "fire" && user === "wood" || cpu === "fire" && user === "metal") {
+    return "user";
+  }
+  else if (cpu === "wood" && user === "water" || cpu === "wood" && user === "earth") {
+    return "user";
+  }
+  else if (cpu === "water" && user === "metal" || cpu === "water" && user === "fire") {
+    return "user";
+  }
+  else if (cpu === "metal" && user === "earth" || cpu === "metal" && user === "wood") {
+    return "user";
+  }
+  else if (cpu === "earth" && user === "fire" || cpu === "earth" && user === "water") {
+    return "user";
+  }
+}
+
+
+
+
+
+/**
  * Play the game functionality. After the user makes choice, all other functions are executed within the playGame function.
  */
 function playGame(e) {
@@ -202,5 +242,6 @@ function playGame(e) {
   renderUserChoice(userChoice);
   let cpuChoice = getCpuChoice();
   renderCpuChoice(cpuChoice);
+  roundWinner(userChoice, cpuChoice);
   openResultBoard();
 }
