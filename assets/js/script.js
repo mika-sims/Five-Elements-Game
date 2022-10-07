@@ -174,6 +174,20 @@ function renderUserChoice(choice) {
   userSelectedImg.src = options[choice];
 }
 
+/**
+ * Get CPU choice
+ */
+function getCpuChoice() {
+  // Return an array containing the names of options
+  const computerOptions = Object.keys(options);
+  // Generate random computer choice
+  let randomChoice = Math.floor(Math.random() * computerOptions.length);
+  let computerChoice = computerOptions[randomChoice];
+  return computerChoice;
+}
+
+
+
 
 /**
  * Play the game functionality. After the user makes choice, all other functions are executed within the playGame function.
@@ -182,5 +196,6 @@ function playGame(e) {
   getUserChoice(e);
   let userChoice = getUserChoice(e);
   renderUserChoice(userChoice);
+  let cpuChoice = getCpuChoice();
   openResultBoard();
 }
