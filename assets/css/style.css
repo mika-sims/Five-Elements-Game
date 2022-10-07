@@ -402,9 +402,20 @@ h2 {
   justify-content: space-evenly;
 }
 
+.round__container {
+  color: #d8dbdd;
+  background: #126d74;
+  padding: 0.2em 1em;
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  width: 30%;
+}
+
 .user_score-table,
 .cpu__score-table {
-  width: 45%;
+  width: 30%;
   background: #e3f3ff;
   border-radius: 5px;
   padding: 0.6em 0.5em;
@@ -437,9 +448,13 @@ h2 {
     border: 2px solid #28456b;
   }
 
+  .round__container {
+    font-size: 1.3em;
+    width: 30%;
+  }
+
   .user_score-table,
   .cpu__score-table {
-    width: 40%;
   }
 
   .user__name,
@@ -581,14 +596,6 @@ h2 {
   height: 300px;
 }
 
-.round__container {
-  color: #d8dbdd;
-  background: #126d74;
-  padding: 0.2em 1em;
-  font-size: 1em;
-  font-weight: 700;
-}
-
 .choices__container {
   width: 100%;
   display: flex;
@@ -632,10 +639,6 @@ h2 {
     position: relative;
     width: 400px;
     height: 400px;
-  }
-
-  .round__container {
-    font-size: 1.3em;
   }
 
   .choices__container {
