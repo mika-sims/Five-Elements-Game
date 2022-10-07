@@ -21,6 +21,7 @@ const userSelectedImg = document.querySelector(".user__choice-img");
 const cpuSelectedImg = document.querySelector(".cpu__choice-img");
 const resultText = document.querySelector(".result__text");
 const roundContainer = document.querySelector(".round__container");
+const userScoreBoard = document.querySelector(".user__score");
 let roundCounter = 0;
 let userScore = 0;
 
@@ -210,18 +211,38 @@ function roundWinner(user, cpu) {
     return "draw";
   }
   else if (user === "fire" && cpu === "wood" || user === "fire" && cpu === "metal") {
+    countUserScore();
+    setTimeout(() => {
+      renderUserScore();
+    }, 1500);
     return "user";
   }
   else if (user === "wood" && cpu === "water" || user === "wood" && cpu === "earth") {
+    countUserScore();
+    setTimeout(() => {
+      renderUserScore();
+    }, 1500);
     return "user";
   }
   else if (user === "water" && cpu === "metal" || user === "water" && cpu === "fire") {
+    countUserScore();
+    setTimeout(() => {
+      renderUserScore();
+    }, 1500);
     return "user";
   }
   else if (user === "metal" && cpu === "earth" || user === "metal" && cpu === "wood") {
+    countUserScore();
+    setTimeout(() => {
+      renderUserScore();
+    }, 1500);
     return "user";
   }
   else if (user === "earth" && cpu === "fire" || user === "earth" && cpu === "water") {
+    countUserScore();
+    setTimeout(() => {
+      renderUserScore();
+    }, 1500);
     return "user";
   }
   else {
@@ -251,6 +272,15 @@ function countUserScore() {
   userScore += 1;
   return userScore;
 }
+
+/**
+ * Render user score
+ */
+function renderUserScore() {
+  userScoreBoard.innerHTML = `${userScore}`;
+}
+
+
 
 
 
