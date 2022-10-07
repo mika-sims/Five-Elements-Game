@@ -1,7 +1,7 @@
 
 /*========== GLOBAL VARIABLES ==========*/
 const mainPage = document.querySelector(".main__page");
-const openPlaygroundPageBtn = document.querySelector(".open__playground-btn");
+const openPlaygroundBoardBtn = document.querySelector(".open__playground-btn");
 const welcomeModalContainer = document.querySelector(".welcome__modal-container");
 const welcomeModal = document.querySelector(".welcome__modal");
 const welcomeModalxMark = document.querySelector(".welcome__modal-x-mark");
@@ -12,7 +12,7 @@ const rulesModalContainer = document.querySelector(".rules__modal-container");
 const rulesModal = document.querySelector(".rules__modal");
 const mainRulesBtn = document.querySelector(".main__rules-btn");
 const footer = document.querySelector(".footer");
-const playgroundPage = document.querySelector(".playground");
+const playgroundBoard = document.querySelector(".playground");
 const scoreboard = document.querySelector(".scoreboard");
 const userOptions = document.querySelectorAll(".user__option");
 const resultBoard = document.querySelector(".result__board");
@@ -22,7 +22,7 @@ rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesM
 welcomeModalxMark.addEventListener("click", closeWelcomeModal);
 playBtn.addEventListener("click", closeWelcomeModal);
 rulesModalxMark.addEventListener("click", closeRulesModal);
-openPlaygroundPageBtn.addEventListener("click", openPlaygroundPage);
+openPlaygroundBoardBtn.addEventListener("click", openPlaygroundBoard);
 userOptions.forEach((userOption) => userOption.addEventListener("click", playGame));
 
 // Object of options and their sources
@@ -109,17 +109,17 @@ window.addEventListener("click", e => {
 /**
  * Provide transition from main page to playground page
  */
-function openPlaygroundPage() {
+function openPlaygroundBoard() {
   mainPage.classList.add("animate__fadeOutLeftBig");
-  playgroundPage.classList.remove("animate__zoomOut");
-  playgroundPage.classList.add("animate__zoomIn");
+  playgroundBoard.classList.remove("animate__zoomOut");
+  playgroundBoard.classList.add("animate__zoomIn");
   scoreboard.classList.add("animate__zoomIn");
   mainRulesBtn.classList.add("animate__zoomIn");
   welcomeModal.classList.add("animate__fadeInRightBig");
   footer.classList.add("animate__fadeInUpBig");
   setTimeout(() => {
     mainPage.classList.add("hide");
-    playgroundPage.classList.remove("hide");
+    playgroundBoard.classList.remove("hide");
     scoreboard.classList.remove("hide");
     mainRulesBtn.classList.remove("hide");
     welcomeModalContainer.classList.remove("hide");
@@ -132,10 +132,10 @@ function openPlaygroundPage() {
  * Provide transition from playground board to result board
  */
 function openResultBoard() {
-  playgroundPage.classList.remove("animate__zoomIn");
-  playgroundPage.classList.add("animate__zoomOut");
+  playgroundBoard.classList.remove("animate__zoomIn");
+  playgroundBoard.classList.add("animate__zoomOut");
   setTimeout(() => {
-    playgroundPage.classList.add("hide");
+    playgroundBoard.classList.add("hide");
     resultBoard.classList.remove("hide");
     resultBoard.classList.add("animate__zoomIn");
   }, 500);
