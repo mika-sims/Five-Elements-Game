@@ -260,7 +260,7 @@ h2 {
   gap: 2em;
 }
 
-.rules__btn,
+.modal__rules-btn,
 .play__btn {
   background: #1b1c47;
   color: #e9f3ff;
@@ -289,14 +289,14 @@ h2 {
     gap: 5em;
   }
 
-  .rules__btn,
+  .modal__rules-btn,
   .play__btn {
     font-size: 1.2em;
     transition: 0.2s ease-in-out;
     cursor: pointer;
   }
 
-  .rules__btn:hover,
+  .modal__rules-btn:hover,
   .play__btn:hover {
     /* border: 2px solid #1b1c47; */
     background: #454792;
@@ -502,7 +502,7 @@ h2 {
   right: 3em;
 }
 
-.playground__rules-btn {
+.main__rules-btn {
   background: #e9f3ff;
   color: #28456b;
   font-size: 1.1em;
@@ -546,14 +546,14 @@ h2 {
     right: 4.5em;
   }
 
-  .playground__rules-btn {
+  .main__rules-btn {
     font-size: 1.3em;
     margin-top: 2em;
     cursor: pointer;
     transition: 0.3s ease-in-out;
   }
 
-  .playground__rules-btn:hover {
+  .main__rules-btn:hover {
     transform: scale(1.1);
   }
 }
