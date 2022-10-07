@@ -179,11 +179,11 @@ function renderUserChoice(choice) {
  */
 function getCpuChoice() {
   // Return an array containing the names of options
-  const computerOptions = Object.keys(options);
+  const cpuOptions = Object.keys(options);
   // Generate random computer choice
-  let randomChoice = Math.floor(Math.random() * computerOptions.length);
-  let computerChoice = computerOptions[randomChoice];
-  return computerChoice;
+  let randomChoice = Math.floor(Math.random() * cpuOptions.length);
+  let cpuChoice = cpuOptions[randomChoice];
+  return cpuChoice;
 }
 
 /**
