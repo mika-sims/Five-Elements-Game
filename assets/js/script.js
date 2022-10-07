@@ -15,6 +15,7 @@ const footer = document.querySelector(".footer");
 const playgroundPage = document.querySelector(".playground");
 const scoreboard = document.querySelector(".scoreboard");
 const userOptions = document.querySelectorAll(".user__option");
+const resultBoard = document.querySelector(".result__board");
 
 /*========== EVENT LISTENERS ==========*/
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
@@ -110,6 +111,7 @@ window.addEventListener("click", e => {
  */
 function openPlaygroundPage() {
   mainPage.classList.add("animate__fadeOutLeftBig");
+  playgroundPage.classList.remove("animate__zoomOut");
   playgroundPage.classList.add("animate__zoomIn");
   scoreboard.classList.add("animate__zoomIn");
   mainRulesBtn.classList.add("animate__zoomIn");
@@ -123,4 +125,24 @@ function openPlaygroundPage() {
     welcomeModalContainer.classList.remove("hide");
     footer.classList.remove("hide");
   }, 500);
+}
+
+
+/**
+ * Provide transition from playground board to result board
+ */
+function openResultBoard() {
+  playgroundPage.classList.remove("animate__zoomIn");
+  playgroundPage.classList.add("animate__zoomOut");
+  setTimeout(() => {
+    playgroundPage.classList.add("hide");
+    resultBoard.classList.remove("hide");
+    resultBoard.classList.add("animate__zoomIn");
+  }, 500);
+}
+/**
+ * Play the game functionality. After the user makes choice, all other functions are executed within the playGame function.
+ */
+function playGame() {
+  openResultBoard();
 }
