@@ -128,7 +128,7 @@ h2 {
   color: #f0f0f0;
 }
 
-.open__gameboard-btn {
+.open__playground-btn {
   background: #e9f3ff;
   color: #28456b;
   font-size: 1.1em;
@@ -177,14 +177,14 @@ h2 {
     font-size: 1.2em;
   }
 
-  .open__gameboard-btn {
+  .open__playground-btn {
     font-size: 1.3em;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     height: 40px;
   }
 
-  .open__gameboard-btn:hover {
+  .open__playground-btn:hover {
     border: 1px solid #e9f3ff;
     background: none;
     color: #e9f3ff;
