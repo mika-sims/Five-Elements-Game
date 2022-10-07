@@ -526,6 +526,7 @@ h2 {
   font-weight: 600;
   text-transform: uppercase;
   padding: 0.2em 1em;
+  margin-top: 2em;
 }
 
 /* Playground section media query */
