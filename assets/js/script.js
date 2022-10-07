@@ -20,6 +20,7 @@ const nextGameBtn = document.querySelector(".next__game-btn");
 const userSelectedImg = document.querySelector(".user__choice-img");
 const cpuSelectedImg = document.querySelector(".cpu__choice-img");
 const resultText = document.querySelector(".result__text");
+const roundContainer = document.querySelector(".round__container");
 let roundCounter = 0;
 
 /*========== EVENT LISTENERS ==========*/
@@ -189,6 +190,7 @@ function getCpuChoice() {
   let randomChoice = Math.floor(Math.random() * cpuOptions.length);
   let cpuChoice = cpuOptions[randomChoice];
   countRounds();
+  renderRounds();
   return cpuChoice;
 }
 
@@ -235,7 +237,12 @@ function countRounds() {
   return roundCounter;
 }
 
-
+/**
+ * Render rounds
+ */
+function renderRounds() {
+  roundContainer.innerHTML = `ROUND ${roundCounter}`;
+}
 
 
 
