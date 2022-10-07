@@ -19,6 +19,7 @@ const resultBoard = document.querySelector(".result__board");
 const nextGameBtn = document.querySelector(".next__game-btn");
 const userSelectedImg = document.querySelector(".user__choice-img");
 const cpuSelectedImg = document.querySelector(".cpu__choice-img");
+const resultText = document.querySelector(".result__text");
 
 /*========== EVENT LISTENERS ==========*/
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
@@ -165,6 +166,7 @@ function nextRound() {
  */
 function getUserChoice(e) {
   let userSelected = e.target.id;
+  console.log(userSelected);
   return userSelected;
 }
 /**
@@ -183,6 +185,7 @@ function getCpuChoice() {
   // Generate random computer choice
   let randomChoice = Math.floor(Math.random() * cpuOptions.length);
   let cpuChoice = cpuOptions[randomChoice];
+  console.log(cpuChoice);
   return cpuChoice;
 }
 
@@ -197,37 +200,53 @@ function renderCpuChoice(choice) {
  * Get round winner
  */
 function roundWinner(user, cpu) {
-  if (user === "fire" && cpu === "wood" || user === "fire" && cpu === "metal") {
+  if (user === cpu) {
+    console.log(user, cpu);
+    return "draw";
+  }
+  else if (user === "fire" && cpu === "wood" || user === "fire" && cpu === "metal") {
+    console.log(user, cpu);
     return "user";
   }
   else if (user === "wood" && cpu === "water" || user === "wood" && cpu === "earth") {
+    console.log(user, cpu);
     return "user";
   }
   else if (user === "water" && cpu === "metal" || user === "water" && cpu === "fire") {
+    console.log(user, cpu);
     return "user";
   }
   else if (user === "metal" && cpu === "earth" || user === "metal" && cpu === "wood") {
+    console.log(user, cpu);
     return "user";
   }
   else if (user === "earth" && cpu === "fire" || user === "earth" && cpu === "water") {
+    console.log(user, cpu);
     return "user";
   }
-  else if (cpu === "fire" && user === "wood" || cpu === "fire" && user === "metal") {
-    return "user";
+  else {
+    console.log(user, cpu);
+    return "cpu";
   }
-  else if (cpu === "wood" && user === "water" || cpu === "wood" && user === "earth") {
-    return "user";
-  }
-  else if (cpu === "water" && user === "metal" || cpu === "water" && user === "fire") {
-    return "user";
-  }
-  else if (cpu === "metal" && user === "earth" || cpu === "metal" && user === "wood") {
-    return "user";
-  }
-  else if (cpu === "earth" && user === "fire" || cpu === "earth" && user === "water") {
-    return "user";
+
+}
+
+/**
+ * Render round winner
+ */
+function renderRoundWinner(roundWinner) {
+  if (roundWinner === "user") {
+    resultText.innerHTML = "YOU WON";
+    userSelectedImg.classList.add("animate__flash");
+  } else if (roundWinner === "cpu") {
+    resultText.innerHTML = "CPU WON";
+    cpuSelectedImg.classList.add("animate__flash");
+  } else if (roundWinner === "draw") {
+    resultText.innerHTML = "DRAW";
+    resultText.classList.add("animate__flash");
   }
 }
+
 
 
 
@@ -242,6 +261,7 @@ function playGame(e) {
   renderUserChoice(userChoice);
   let cpuChoice = getCpuChoice();
   renderCpuChoice(cpuChoice);
-  roundWinner(userChoice, cpuChoice);
+  let winner = roundWinner(userChoice, cpuChoice);
+  renderRoundWinner(winner);
   openResultBoard();
 }
