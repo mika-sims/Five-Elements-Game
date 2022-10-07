@@ -17,6 +17,8 @@ const scoreboard = document.querySelector(".scoreboard");
 const userOptions = document.querySelectorAll(".user__option");
 const resultBoard = document.querySelector(".result__board");
 const nextGameBtn = document.querySelector(".next__game-btn");
+const userSelectedImg = document.querySelector(".user__choice-img");
+const cpuSelectedImg = document.querySelector(".cpu__choice-img");
 
 /*========== EVENT LISTENERS ==========*/
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
@@ -158,9 +160,18 @@ function nextRound() {
   }, 750);
 }
 
+/**
+ * Get user choice
+ */
 function getUserChoice(e) {
   let userSelected = e.target.id;
   return userSelected;
+}
+/**
+ * Render user choice
+ */
+function renderUserChoice(choice) {
+  userSelectedImg.src = options[choice];
 }
 
 
@@ -169,5 +180,7 @@ function getUserChoice(e) {
  */
 function playGame(e) {
   getUserChoice(e);
+  let userChoice = getUserChoice(e);
+  renderUserChoice(userChoice);
   openResultBoard();
 }
