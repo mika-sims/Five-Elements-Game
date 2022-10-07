@@ -22,8 +22,10 @@ const cpuSelectedImg = document.querySelector(".cpu__choice-img");
 const resultText = document.querySelector(".result__text");
 const roundContainer = document.querySelector(".round__container");
 const userScoreBoard = document.querySelector(".user__score");
+const cpuScoreBoard = document.querySelector(".cpu__score");
 let roundCounter = 0;
 let userScore = 0;
+let cpuScore = 0;
 
 /*========== EVENT LISTENERS ==========*/
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
@@ -191,8 +193,7 @@ function getCpuChoice() {
   // Generate random computer choice
   let randomChoice = Math.floor(Math.random() * cpuOptions.length);
   let cpuChoice = cpuOptions[randomChoice];
-  countRounds();
-  renderRounds();
+
   return cpuChoice;
 }
 
@@ -211,38 +212,18 @@ function roundWinner(user, cpu) {
     return "draw";
   }
   else if (user === "fire" && cpu === "wood" || user === "fire" && cpu === "metal") {
-    countUserScore();
-    setTimeout(() => {
-      renderUserScore();
-    }, 1500);
     return "user";
   }
   else if (user === "wood" && cpu === "water" || user === "wood" && cpu === "earth") {
-    countUserScore();
-    setTimeout(() => {
-      renderUserScore();
-    }, 1500);
     return "user";
   }
   else if (user === "water" && cpu === "metal" || user === "water" && cpu === "fire") {
-    countUserScore();
-    setTimeout(() => {
-      renderUserScore();
-    }, 1500);
     return "user";
   }
   else if (user === "metal" && cpu === "earth" || user === "metal" && cpu === "wood") {
-    countUserScore();
-    setTimeout(() => {
-      renderUserScore();
-    }, 1500);
     return "user";
   }
   else if (user === "earth" && cpu === "fire" || user === "earth" && cpu === "water") {
-    countUserScore();
-    setTimeout(() => {
-      renderUserScore();
-    }, 1500);
     return "user";
   }
   else {
@@ -255,42 +236,31 @@ function roundWinner(user, cpu) {
  */
 function countRounds() {
   roundCounter += 1;
+  setTimeout(() => {
+    roundContainer.innerHTML = `ROUND ${roundCounter}`;
+  }, 1500);
   return roundCounter;
 }
 
 /**
- * Render rounds
+ * Increase and render scores depending on the argument passed to the function
  */
-function renderRounds() {
-  roundContainer.innerHTML = `ROUND ${roundCounter}`;
+
+function countScores(winner) {
+  if (winner === "user") {
+    userScore += 1;
+    setTimeout(() => {
+      userScoreBoard.innerHTML = `${userScore}`;
+    }, 1500);
+    return userScore;
+  } else if (winner === "cpu") {
+    cpuScore += 1;
+    setTimeout(() => {
+      cpuScoreBoard.innerHTML = `${cpuScore}`;
+    }, 1500);
+    return cpuScore;
+  }
 }
-
-/**
- * Count the user score
- */
-function countUserScore() {
-  userScore += 1;
-  return userScore;
-}
-
-/**
- * Render user score
- */
-function renderUserScore() {
-  userScoreBoard.innerHTML = `${userScore}`;
-}
-
-/**
- * Count the CPU score
- */
-function countCpuScore() {
-  cpuScore += 1;
-  return cpuScore;
-}
-
-
-
-
 
 /**
  * Render round winner
@@ -318,11 +288,13 @@ function renderRoundWinner(roundWinner) {
  */
 function playGame(e) {
   getUserChoice(e);
+  openResultBoard();
   let userChoice = getUserChoice(e);
   renderUserChoice(userChoice);
   let cpuChoice = getCpuChoice();
   renderCpuChoice(cpuChoice);
   let winner = roundWinner(userChoice, cpuChoice);
+  countScores(winner);
   renderRoundWinner(winner);
-  openResultBoard();
+  countRounds();
 }
