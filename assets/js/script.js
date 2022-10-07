@@ -22,6 +22,7 @@ const cpuSelectedImg = document.querySelector(".cpu__choice-img");
 const resultText = document.querySelector(".result__text");
 const roundContainer = document.querySelector(".round__container");
 let roundCounter = 0;
+let userScore = 0;
 
 /*========== EVENT LISTENERS ==========*/
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
@@ -233,7 +234,6 @@ function roundWinner(user, cpu) {
  */
 function countRounds() {
   roundCounter += 1;
-  console.log(roundCounter);
   return roundCounter;
 }
 
@@ -244,7 +244,13 @@ function renderRounds() {
   roundContainer.innerHTML = `ROUND ${roundCounter}`;
 }
 
-
+/**
+ * Count the user score
+ */
+function countUserScore() {
+  userScore += 1;
+  return userScore;
+}
 
 
 
