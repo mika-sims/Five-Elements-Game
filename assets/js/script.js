@@ -1,6 +1,7 @@
 
 /*========== GLOBAL VARIABLES ==========*/
 const openPlaygroundPageBtn = document.querySelector(".open__playground-btn");
+const rulesButtons = document.querySelectorAll(".rules__btn");
 
 // Object of options and their sources
 const options = {
@@ -46,6 +47,18 @@ function preloader() {
  */
 let preloaderInterval = setInterval(preloader, 1000);
 
+/*========== OPEN AND CLOSE THE MODALS FUNCTIONALITY ==========*/
+
+rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
+
+function openRulesModal() {
+  // Get elements from DOM
+  const rulesModalContainer = document.querySelector(".rules__modal-container");
+  const rulesModal = document.querySelector(".rules__modal");
+
+  rulesModalContainer.classList.remove("hide");
+  rulesModal.classList.add("animate__fadeInDownBig");
+}
 /*========== PAGE TRANSITION FROM MAIN PAGE TO PLAYGROUND PAGE FUNCTIONALITY ==========*/
 
 /**
