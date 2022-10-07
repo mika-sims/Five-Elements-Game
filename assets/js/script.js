@@ -1,12 +1,17 @@
 
 /*========== GLOBAL VARIABLES ==========*/
 const openPlaygroundPageBtn = document.querySelector(".open__playground-btn");
+const welcomeModalContainer = document.querySelector(".welcome__modal-container");
+const welcomeModal = document.querySelector(".welcome__modal");
 const rulesButtons = document.querySelectorAll(".rules__btn");
 const rulesModalxMark = document.querySelector(".rules__modal-x-mark");
 const rulesModalContainer = document.querySelector(".rules__modal-container");
 const rulesModal = document.querySelector(".rules__modal");
 
 /*========== EVENT LISTENERS ==========*/
+rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
+rulesModalxMark.addEventListener("click", closeRulesModal);
+openPlaygroundPageBtn.addEventListener("click", openPlaygroundPage);
 
 // Object of options and their sources
 const options = {
@@ -54,16 +59,12 @@ let preloaderInterval = setInterval(preloader, 1000);
 
 /*========== OPEN AND CLOSE THE MODALS FUNCTIONALITY ==========*/
 
-rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
-
+// Open/Close rules modal
 function openRulesModal() {
   rulesModalContainer.classList.remove("hide");
   rulesModal.classList.remove("animate__fadeOutDownBig");
   rulesModal.classList.add("animate__fadeInDownBig");
 }
-
-rulesModalxMark.addEventListener("click", closeRulesModal);
-
 function closeRulesModal() {
   rulesModal.classList.remove("animate__fadeInDownBig");
   rulesModal.classList.add("animate__fadeOutDownBig");
@@ -71,27 +72,20 @@ function closeRulesModal() {
     rulesModalContainer.classList.add("hide");
   }, 400);
 }
-
 window.addEventListener("click", e => {
   if (e.target === rulesModalContainer) {
     closeRulesModal();
   }
 });
 
-
-/*========== PAGE TRANSITION FROM MAIN PAGE TO PLAYGROUND PAGE FUNCTIONALITY ==========*/
-
 /**
- * Add click event to openPlaygroundPageBtn and provide transition from main page to playground page
+ * Provide transition from main page to playground page
  */
-openPlaygroundPageBtn.addEventListener("click", () => {
-  // Get elements from DOM
+function openPlaygroundPage() {
   const mainPage = document.querySelector(".main__page");
   const playgroundPage = document.querySelector(".playground");
   const scoreboard = document.querySelector(".scoreboard");
   const mainRulesBtn = document.querySelector(".main__rules-btn");
-  const welcomeModalContainer = document.querySelector(".welcome__modal-container");
-  const welcomeModal = document.querySelector(".welcome__modal");
   const footer = document.querySelector(".footer");
 
   mainPage.classList.add("animate__fadeOutLeftBig");
@@ -108,4 +102,4 @@ openPlaygroundPageBtn.addEventListener("click", () => {
     welcomeModalContainer.classList.remove("hide");
     footer.classList.remove("hide");
   }, 500);
-});
+}
