@@ -450,11 +450,11 @@ h2 {
 
   .round__container {
     font-size: 1.3em;
-    width: 30%;
   }
 
   .user_score-table,
   .cpu__score-table {
+    width: 30%;
   }
 
   .user__name,
