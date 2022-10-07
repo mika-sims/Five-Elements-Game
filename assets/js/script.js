@@ -154,6 +154,9 @@ function nextRound() {
   resultBoard.classList.remove("animate__fadeIn");
   playgroundBoard.classList.remove("animate__fadeOut");
   resultBoard.classList.add("animate__fadeOut");
+  userSelectedImg.classList.add("animate__flash");
+  cpuSelectedImg.classList.add("animate__flash");
+  resultText.classList.add("animate__flash");
   setTimeout(() => {
     playgroundBoard.classList.remove("hide");
     playgroundBoard.classList.add("animate__fadeIn");
