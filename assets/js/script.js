@@ -168,6 +168,7 @@ function nextRound() {
     playgroundBoard.classList.add("animate__fadeIn");
     resultBoard.classList.add("hide");
   }, 750);
+  removeDisabledAttribute();
 }
 
 /**
@@ -278,8 +279,25 @@ function renderRoundWinner(roundWinner) {
   }
 }
 
+/**
+ * Prevent multiclick
+ */
 
+function setDisabledAttribute() {
+  for (const userOption of userOptions) {
+    userOption.setAttribute("disabled", "");
+  }
+}
 
+/**
+ * Remove disabled attribute to be able to click next round
+ */
+
+function removeDisabledAttribute() {
+  for (const userOption of userOptions) {
+    userOption.removeAttribute("disabled", "");
+  }
+}
 
 
 
@@ -297,4 +315,5 @@ function playGame(e) {
   countScores(winner);
   renderRoundWinner(winner);
   countRounds();
+  setDisabledAttribute();
 }
