@@ -16,6 +16,7 @@ const playgroundBoard = document.querySelector(".playground");
 const scoreboard = document.querySelector(".scoreboard");
 const userOptions = document.querySelectorAll(".user__option");
 const resultBoard = document.querySelector(".result__board");
+const nextGameBtn = document.querySelector(".next__game-btn");
 
 /*========== EVENT LISTENERS ==========*/
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
@@ -24,6 +25,7 @@ playBtn.addEventListener("click", closeWelcomeModal);
 rulesModalxMark.addEventListener("click", closeRulesModal);
 openPlaygroundBoardBtn.addEventListener("click", openPlaygroundBoard);
 userOptions.forEach((userOption) => userOption.addEventListener("click", playGame));
+nextGameBtn.addEventListener("click", nextRound);
 
 // Object of options and their sources
 const options = {
@@ -133,13 +135,32 @@ function openPlaygroundBoard() {
  */
 function openResultBoard() {
   playgroundBoard.classList.remove("animate__zoomIn");
-  playgroundBoard.classList.add("animate__zoomOut");
+  playgroundBoard.classList.remove("animate__fadeIn");
+  playgroundBoard.classList.add("animate__fadeOut");
+  resultBoard.classList.remove("animate__fadeOut");
   setTimeout(() => {
     playgroundBoard.classList.add("hide");
     resultBoard.classList.remove("hide");
-    resultBoard.classList.add("animate__zoomIn");
+    resultBoard.classList.add("animate__fadeIn");
   }, 500);
 }
+
+/**
+ * Apart from providing the next round function, it also provides the transition from the result board to the playground board.
+ */
+function nextRound() {
+  resultBoard.classList.remove("animate__fadeIn");
+  playgroundBoard.classList.remove("animate__fadeOut");
+  resultBoard.classList.add("animate__fadeOut");
+  setTimeout(() => {
+    playgroundBoard.classList.remove("hide");
+    playgroundBoard.classList.add("animate__fadeIn");
+    resultBoard.classList.add("hide");
+  }, 750);
+}
+
+
+
 /**
  * Play the game functionality. After the user makes choice, all other functions are executed within the playGame function.
  */
