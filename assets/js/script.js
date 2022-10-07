@@ -1,17 +1,28 @@
 
 /*========== GLOBAL VARIABLES ==========*/
+const mainPage = document.querySelector(".main__page");
 const openPlaygroundPageBtn = document.querySelector(".open__playground-btn");
 const welcomeModalContainer = document.querySelector(".welcome__modal-container");
 const welcomeModal = document.querySelector(".welcome__modal");
+const welcomeModalxMark = document.querySelector(".welcome__modal-x-mark");
+const playBtn = document.querySelector(".play__btn");
 const rulesButtons = document.querySelectorAll(".rules__btn");
 const rulesModalxMark = document.querySelector(".rules__modal-x-mark");
 const rulesModalContainer = document.querySelector(".rules__modal-container");
 const rulesModal = document.querySelector(".rules__modal");
+const mainRulesBtn = document.querySelector(".main__rules-btn");
+const footer = document.querySelector(".footer");
+const playgroundPage = document.querySelector(".playground");
+const scoreboard = document.querySelector(".scoreboard");
+const userOptions = document.querySelectorAll(".user__option");
 
 /*========== EVENT LISTENERS ==========*/
 rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
+welcomeModalxMark.addEventListener("click", closeWelcomeModal);
+playBtn.addEventListener("click", closeWelcomeModal);
 rulesModalxMark.addEventListener("click", closeRulesModal);
 openPlaygroundPageBtn.addEventListener("click", openPlaygroundPage);
+userOptions.forEach((userOption) => userOption.addEventListener("click", playGame));
 
 // Object of options and their sources
 const options = {
@@ -59,6 +70,21 @@ let preloaderInterval = setInterval(preloader, 1000);
 
 /*========== OPEN AND CLOSE THE MODALS FUNCTIONALITY ==========*/
 
+// Close welcome modal
+function closeWelcomeModal() {
+  welcomeModal.classList.remove("animate__fadeInRightBig");
+  welcomeModal.classList.add("animate__fadeOutLeftBig");
+  setTimeout(() => {
+    welcomeModalContainer.classList.add("hide");
+  }, 500);
+}
+// Close the modal on window click
+window.addEventListener("click", e => {
+  if (e.target === welcomeModalContainer) {
+    closeWelcomeModal();
+  }
+});
+
 // Open/Close rules modal
 function openRulesModal() {
   rulesModalContainer.classList.remove("hide");
@@ -72,6 +98,7 @@ function closeRulesModal() {
     rulesModalContainer.classList.add("hide");
   }, 400);
 }
+// Close the modal on window click
 window.addEventListener("click", e => {
   if (e.target === rulesModalContainer) {
     closeRulesModal();
@@ -82,12 +109,6 @@ window.addEventListener("click", e => {
  * Provide transition from main page to playground page
  */
 function openPlaygroundPage() {
-  const mainPage = document.querySelector(".main__page");
-  const playgroundPage = document.querySelector(".playground");
-  const scoreboard = document.querySelector(".scoreboard");
-  const mainRulesBtn = document.querySelector(".main__rules-btn");
-  const footer = document.querySelector(".footer");
-
   mainPage.classList.add("animate__fadeOutLeftBig");
   playgroundPage.classList.add("animate__zoomIn");
   scoreboard.classList.add("animate__zoomIn");
