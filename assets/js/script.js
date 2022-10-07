@@ -1,5 +1,6 @@
 
 /*========== GLOBAL VARIABLES ==========*/
+const openPlaygroundPageBtn = document.querySelector(".open__playground-btn");
 
 // Object of options and their sources
 const options = {
@@ -44,3 +45,34 @@ function preloader() {
  * Assign setInterval to a variable and call the preloader function inside the setInterval function to iterate every 1000 seconds.
  */
 let preloaderInterval = setInterval(preloader, 1000);
+
+/*========== PAGE TRANSITION FROM MAIN PAGE TO PLAYGROUND PAGE FUNCTIONALITY ==========*/
+
+/**
+ * Add click event to openPlaygroundPageBtn and provide transition from main page to playground page
+ */
+openPlaygroundPageBtn.addEventListener("click", () => {
+  // Get elements from DOM
+  const mainPage = document.querySelector(".main__page");
+  const playgroundPage = document.querySelector(".playground");
+  const scoreboard = document.querySelector(".scoreboard");
+  const mainRulesBtn = document.querySelector(".main__rules-btn");
+  const welcomeModalContainer = document.querySelector(".welcome__modal-container");
+  const welcomeModal = document.querySelector(".welcome__modal");
+  const footer = document.querySelector(".footer");
+
+  mainPage.classList.add("animate__fadeOutLeftBig");
+  playgroundPage.classList.add("animate__zoomIn");
+  scoreboard.classList.add("animate__zoomIn");
+  mainRulesBtn.classList.add("animate__zoomIn");
+  welcomeModal.classList.add("animate__fadeInRightBig");
+  footer.classList.add("animate__fadeInUpBig");
+  setTimeout(() => {
+    mainPage.classList.add("hide");
+    playgroundPage.classList.remove("hide");
+    scoreboard.classList.remove("hide");
+    mainRulesBtn.classList.remove("hide");
+    welcomeModalContainer.classList.remove("hide");
+    footer.classList.remove("hide");
+  }, 500);
+});
