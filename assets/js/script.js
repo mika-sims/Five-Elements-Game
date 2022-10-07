@@ -169,7 +169,6 @@ function nextRound() {
  */
 function getUserChoice(e) {
   let userSelected = e.target.id;
-  console.log(userSelected);
   return userSelected;
 }
 /**
@@ -188,7 +187,6 @@ function getCpuChoice() {
   // Generate random computer choice
   let randomChoice = Math.floor(Math.random() * cpuOptions.length);
   let cpuChoice = cpuOptions[randomChoice];
-  console.log(cpuChoice);
   return cpuChoice;
 }
 
@@ -204,31 +202,24 @@ function renderCpuChoice(choice) {
  */
 function roundWinner(user, cpu) {
   if (user === cpu) {
-    console.log(user, cpu);
     return "draw";
   }
   else if (user === "fire" && cpu === "wood" || user === "fire" && cpu === "metal") {
-    console.log(user, cpu);
     return "user";
   }
   else if (user === "wood" && cpu === "water" || user === "wood" && cpu === "earth") {
-    console.log(user, cpu);
     return "user";
   }
   else if (user === "water" && cpu === "metal" || user === "water" && cpu === "fire") {
-    console.log(user, cpu);
     return "user";
   }
   else if (user === "metal" && cpu === "earth" || user === "metal" && cpu === "wood") {
-    console.log(user, cpu);
     return "user";
   }
   else if (user === "earth" && cpu === "fire" || user === "earth" && cpu === "water") {
-    console.log(user, cpu);
     return "user";
   }
   else {
-    console.log(user, cpu);
     return "cpu";
   }
 
