@@ -383,6 +383,10 @@ function getGameWinner(userScore, cpuScore) {
   finishGame();
 }
 
+/**
+ * Finis the game
+ */
+
 function finishGame() {
   let rounds = countRounds();
   if (rounds == totalRound) {
@@ -395,6 +399,10 @@ function finishGame() {
     }, 2000);
   }
 }
+
+/**
+ * Reset all counters and start new game
+ */
 
 function startNewGame() {
   userScore = 0;
@@ -414,4 +422,3 @@ function startNewGame() {
   }, 400);
   nextRound();
 }
-
