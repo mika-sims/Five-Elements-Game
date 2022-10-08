@@ -273,12 +273,6 @@ h2 {
   cursor: pointer;
 }
 
-.welcome__modal-buttons {
-  bottom: 1em;
-  display: flex;
-  gap: 2em;
-}
-
 .modal__rules-btn,
 .play__btn {
   background: #1b1c47;
