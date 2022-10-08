@@ -178,6 +178,27 @@ function getUserChoice(e) {
   let userSelected = e.target.id;
   return userSelected;
 }
+
+/**
+ * Prevent multiclick
+ */
+
+function setDisabledAttribute() {
+  for (const userOption of userOptions) {
+    userOption.setAttribute("disabled", "");
+  }
+}
+
+/**
+ * Remove disabled attribute to be able to click next round
+ */
+
+function removeDisabledAttribute() {
+  for (const userOption of userOptions) {
+    userOption.removeAttribute("disabled", "");
+  }
+}
+
 /**
  * Render user choice
  */
@@ -203,6 +224,38 @@ function getCpuChoice() {
  */
 function renderCpuChoice(choice) {
   cpuSelectedImg.src = options[choice];
+}
+
+/**
+ * Count the rounds
+ */
+function countRounds() {
+  roundCounter += 1;
+  setTimeout(() => {
+    roundContainer.innerHTML = `ROUND ${roundCounter}`;
+  }, 1500);
+  return roundCounter;
+}
+
+/**
+ * Increase and render scores depending on the argument passed to the function
+ */
+
+function countScores(winner) {
+  if (winner === "user") {
+    userScore += 1;
+    setTimeout(() => {
+      userScoreBoard.innerHTML = `${userScore}`;
+    }, 1500);
+    return userScore;
+
+  } else if (winner === "cpu") {
+    cpuScore += 1;
+    setTimeout(() => {
+      cpuScoreBoard.innerHTML = `${cpuScore}`;
+    }, 1500);
+    return cpuScore;
+  }
 }
 
 /**
@@ -233,37 +286,6 @@ function roundWinner(user, cpu) {
 }
 
 /**
- * Count the rounds
- */
-function countRounds() {
-  roundCounter += 1;
-  setTimeout(() => {
-    roundContainer.innerHTML = `ROUND ${roundCounter}`;
-  }, 1500);
-  return roundCounter;
-}
-
-/**
- * Increase and render scores depending on the argument passed to the function
- */
-
-function countScores(winner) {
-  if (winner === "user") {
-    userScore += 1;
-    setTimeout(() => {
-      userScoreBoard.innerHTML = `${userScore}`;
-    }, 1500);
-    return userScore;
-  } else if (winner === "cpu") {
-    cpuScore += 1;
-    setTimeout(() => {
-      cpuScoreBoard.innerHTML = `${cpuScore}`;
-    }, 1500);
-    return cpuScore;
-  }
-}
-
-/**
  * Render round winner
  */
 function renderRoundWinner(roundWinner) {
@@ -279,25 +301,7 @@ function renderRoundWinner(roundWinner) {
   }
 }
 
-/**
- * Prevent multiclick
- */
 
-function setDisabledAttribute() {
-  for (const userOption of userOptions) {
-    userOption.setAttribute("disabled", "");
-  }
-}
-
-/**
- * Remove disabled attribute to be able to click next round
- */
-
-function removeDisabledAttribute() {
-  for (const userOption of userOptions) {
-    userOption.removeAttribute("disabled", "");
-  }
-}
 
 
 
