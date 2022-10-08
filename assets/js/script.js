@@ -346,6 +346,6 @@ function finishGame(rounds) {
     cpuScore = 0;
     cpuScoreBoard.innerHTML = 0;
     roundCounter = 1;
-    roundContainer.innerHTML = "ROUND 0";
+    roundContainer.innerHTML = "ROUND 1";
   }
 }
