@@ -183,8 +183,8 @@ function nextRound() {
  */
 
 function getTotalRound(e) {
-  totalRound = e.target.innerHTML;
-  console.log(totalRound)
+  totalRound = Number(e.target.innerHTML) + 1;
+  console.log(totalRound);
   return totalRound;
 }
 
@@ -339,8 +339,8 @@ function playGame(e) {
 }
 
 
-function finishGame(rounds, totalRound) {
-  if (rounds == totalRound + 1) {
+function finishGame(rounds) {
+  if (rounds == totalRound) {
     userScore = 0;
     userScoreBoard.innerHTML = 0;
     cpuScore = 0;
