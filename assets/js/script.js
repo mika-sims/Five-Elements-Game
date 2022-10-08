@@ -394,6 +394,9 @@ function finishGame() {
 }
 
 function startNewGame() {
+  userScore = 0;
+  cpuScore = 0;
+  roundCounter = 0;
   userScoreBoard.innerHTML = 0;
   cpuScoreBoard.innerHTML = 0;
   roundContainer.innerHTML = "ROUND 0";
