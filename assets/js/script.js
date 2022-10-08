@@ -24,8 +24,10 @@ const roundContainer = document.querySelector(".round__container");
 const userScoreBoard = document.querySelector(".user__score");
 const cpuScoreBoard = document.querySelector(".cpu__score");
 const totalRoundButtons = document.querySelectorAll(".total__round-btn");
+const winnerModalContainer = document.querySelector(".game__winner-modal-container");
+const winnerModal = document.querySelector(".game__winner-modal");
 let roundCounter = 1;
-let totalRound;
+let totalRound = 3;
 let userScore = 0;
 let cpuScore = 0;
 
@@ -183,7 +185,7 @@ function nextRound() {
  */
 
 function getTotalRound(e) {
-  totalRound = Number(e.target.innerHTML) + 1;
+  totalRound = e.target.innerHTML;
   console.log(totalRound);
   return totalRound;
 }
@@ -340,7 +342,9 @@ function playGame(e) {
 
 
 function finishGame(rounds) {
-  if (rounds == totalRound) {
+  if (rounds == Number(totalRound) + 1) {
+    winnerModalContainer.classList.remove("hide");
+    winnerModal.classList.add("animate__zoomIn");
     userScore = 0;
     userScoreBoard.innerHTML = 0;
     cpuScore = 0;
