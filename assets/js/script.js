@@ -26,6 +26,7 @@ const cpuScoreBoard = document.querySelector(".cpu__score");
 const totalRoundButtons = document.querySelectorAll(".total__round-btn");
 const winnerModalContainer = document.querySelector(".game__winner-modal-container");
 const winnerModal = document.querySelector(".game__winner-modal");
+const startNewGameBtn = document.querySelector(".new__game-btn");
 let roundCounter = 1;
 let totalRound = 3;
 let userScore = 0;
@@ -40,6 +41,7 @@ openPlaygroundBoardBtn.addEventListener("click", openPlaygroundBoard);
 totalRoundButtons.forEach((totalRoundBtn) => totalRoundBtn.addEventListener("click", getTotalRound));
 userOptions.forEach((userOption) => userOption.addEventListener("click", playGame));
 nextGameBtn.addEventListener("click", nextRound);
+startNewGameBtn.addEventListener("click", startNewGame);
 
 // Object of options and their sources
 const options = {
@@ -343,6 +345,7 @@ function playGame(e) {
 
 function finishGame(rounds) {
   if (rounds == Number(totalRound) + 1) {
+    winnerModal.classList.remove("animate__zoomOut");
     winnerModalContainer.classList.remove("hide");
     winnerModal.classList.add("animate__zoomIn");
     userScore = 0;
@@ -352,4 +355,12 @@ function finishGame(rounds) {
     roundCounter = 1;
     roundContainer.innerHTML = "ROUND 1";
   }
+}
+
+function startNewGame() {
+  winnerModal.classList.add("animate__zoomOut");
+  winnerModal.classList.remove("animate__zoomIn");
+  setTimeout(() => {
+    winnerModalContainer.classList.add("hide");
+  }, 500);
 }
