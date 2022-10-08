@@ -23,7 +23,7 @@ const resultText = document.querySelector(".result__text");
 const roundContainer = document.querySelector(".round__container");
 const userScoreBoard = document.querySelector(".user__score");
 const cpuScoreBoard = document.querySelector(".cpu__score");
-let roundCounter = 0;
+let roundCounter = 1;
 let userScore = 0;
 let cpuScore = 0;
 
@@ -169,6 +169,8 @@ function nextRound() {
     resultBoard.classList.add("hide");
   }, 750);
   removeDisabledAttribute();
+  let rounds = countRounds();
+  finishGame(rounds);
 }
 
 /**
@@ -227,18 +229,19 @@ function renderCpuChoice(choice) {
 }
 
 /**
- * Count the rounds
+ * Count and render the rounds
  */
 function countRounds() {
   roundCounter += 1;
   setTimeout(() => {
     roundContainer.innerHTML = `ROUND ${roundCounter}`;
-  }, 1500);
+  }, 500);
   return roundCounter;
 }
 
+
 /**
- * Increase and render scores depending on the argument passed to the function
+ * Count and render scores
  */
 
 function countScores(winner) {
@@ -255,6 +258,9 @@ function countScores(winner) {
       cpuScoreBoard.innerHTML = `${cpuScore}`;
     }, 1500);
     return cpuScore;
+  }
+  else {
+    return userScore, cpuScore;
   }
 }
 
@@ -301,23 +307,30 @@ function renderRoundWinner(roundWinner) {
   }
 }
 
-
-
-
-
 /**
  * Play the game functionality. After the user makes choice, all other functions are executed within the playGame function.
  */
 function playGame(e) {
-  getUserChoice(e);
-  openResultBoard();
   let userChoice = getUserChoice(e);
-  renderUserChoice(userChoice);
+  setDisabledAttribute();
   let cpuChoice = getCpuChoice();
+  openResultBoard();
+  renderUserChoice(userChoice);
   renderCpuChoice(cpuChoice);
   let winner = roundWinner(userChoice, cpuChoice);
-  countScores(winner);
   renderRoundWinner(winner);
-  countRounds();
-  setDisabledAttribute();
+  countScores(winner);
+
+}
+
+
+function finishGame(rounds) {
+  if (rounds == 6) {
+    userScore = 0;
+    userScoreBoard.innerHTML = 0;
+    cpuScore = 0;
+    cpuScoreBoard.innerHTML = 0;
+    roundCounter = 1;
+    roundContainer.innerHTML = "ROUND 0";
+  }
 }
