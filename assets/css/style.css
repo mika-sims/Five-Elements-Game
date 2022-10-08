@@ -204,7 +204,7 @@ h2 {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(27, 28, 71, 0.8);
+  background: #1b1c47cc;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,7 +213,8 @@ h2 {
 }
 
 .welcome__modal-x-mark,
-.rules__modal-x-mark {
+.rules__modal-x-mark,
+.winner__modal-x-mark {
   position: absolute;
   right: 1em;
   top: 1em;
@@ -361,6 +362,71 @@ h2 {
 
   .rule {
     font-size: 1em;
+  }
+}
+
+/* Game winner modal section */
+.game__winner-modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1b1c47cc;
+  z-index: 4;
+}
+
+.game__winner-modal {
+  position: relative;
+  height: 390px;
+  width: 290px;
+  background: #e3f3ff;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  text-align: center;
+}
+
+.game__winner-text {
+  color: #1b1c47;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  word-spacing: 10px;
+}
+.new__game-btn {
+  font-size: 1em;
+  color: #0b0c30;
+  border: 1px solid #454792;
+  padding: 0.2em 1em;
+  font-weight: 700;
+}
+
+/* Game winner modal media query */
+@media screen and (min-width: 600px) {
+  .game__winner-modal {
+    height: 420px;
+    width: 460px;
+  }
+
+  .game__winner-modal p {
+    font-size: 1em;
+  }
+
+  .game__winner-text {
+    color: #1b1c47;
+    font-size: 1.8em;
+  }
+  .new__game-btn {
+    font-size: 1.1em;
+    cursor: pointer;
   }
 }
 
@@ -654,12 +720,6 @@ h2 {
   word-spacing: 10px;
 }
 
-.game__winer-text {
-  color: #d8dbdd;
-  font-size: 1.5em;
-  word-spacing: 10px;
-}
-
 .next__game-btn {
   color: #315079;
   background: #d8dbdd;
@@ -700,12 +760,6 @@ h2 {
     position: absolute;
     top: 4.5em;
     font-size: 2.2em;
-  }
-
-  .game__winer-text {
-    color: #d8dbdd;
-    font-size: 2.5em;
-    word-spacing: 10px;
   }
 
   .next__game-btn {
