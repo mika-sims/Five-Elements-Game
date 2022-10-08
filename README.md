@@ -4,4 +4,4 @@ The Five Elements Game is an extended variation of the classic Rock Paper Scisso
 
 You can view the live site here - <a href="https://mika-sims.github.io/Five-Elements-Game/" target="_blank" rel="noopener">Five Elements Game</a>
 
-![](assets/images/five_elements_game.gif)
+<img src="assets/images/five_elements_game.gif" alt="game promo gif" />
