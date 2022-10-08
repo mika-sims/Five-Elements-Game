@@ -23,7 +23,9 @@ const resultText = document.querySelector(".result__text");
 const roundContainer = document.querySelector(".round__container");
 const userScoreBoard = document.querySelector(".user__score");
 const cpuScoreBoard = document.querySelector(".cpu__score");
+const totalRoundButtons = document.querySelectorAll(".total__round-btn");
 let roundCounter = 1;
+let totalRound;
 let userScore = 0;
 let cpuScore = 0;
 
@@ -33,6 +35,7 @@ welcomeModalxMark.addEventListener("click", closeWelcomeModal);
 playBtn.addEventListener("click", closeWelcomeModal);
 rulesModalxMark.addEventListener("click", closeRulesModal);
 openPlaygroundBoardBtn.addEventListener("click", openPlaygroundBoard);
+totalRoundButtons.forEach((totalRoundBtn) => totalRoundBtn.addEventListener("click", getTotalRound));
 userOptions.forEach((userOption) => userOption.addEventListener("click", playGame));
 nextGameBtn.addEventListener("click", nextRound);
 
@@ -44,8 +47,7 @@ const options = {
   "metal": "assets/images/metal.svg",
   "earth": "assets/images/earth.svg"
 };
-// Will be used in image iteration
-let imgIndex = 0;
+
 
 /* ========== PRELOADER SECTION FUNCTIONALITY ========== */
 /**
@@ -62,6 +64,9 @@ window.addEventListener("load", () => {
     clearInterval(preloaderInterval);
   }, 4700);
 });
+
+// Will be used in image iteration
+let imgIndex = 0;
 
 /**
  * Iterate over the options images in the game while the page is loading
@@ -171,6 +176,16 @@ function nextRound() {
   removeDisabledAttribute();
   let rounds = countRounds();
   finishGame(rounds);
+}
+
+/**
+ * Get the total number of rounds from users input
+ */
+
+function getTotalRound(e) {
+  totalRound = e.target.innerHTML;
+  console.log(totalRound)
+  return totalRound;
 }
 
 /**
@@ -324,8 +339,8 @@ function playGame(e) {
 }
 
 
-function finishGame(rounds) {
-  if (rounds == 6) {
+function finishGame(rounds, totalRound) {
+  if (rounds == totalRound + 1) {
     userScore = 0;
     userScoreBoard.innerHTML = 0;
     cpuScore = 0;
