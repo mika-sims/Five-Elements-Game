@@ -27,6 +27,7 @@ const totalRoundButtons = document.querySelectorAll(".total__round-btn");
 const winnerModalContainer = document.querySelector(".game__winner-modal-container");
 const winnerModal = document.querySelector(".game__winner-modal");
 const winnerTextContainer = document.querySelector(".game__winner-text");
+const winnerModalxMark = document.querySelector(".winner__modal-x-mark");
 const startNewGameBtn = document.querySelector(".new__game-btn");
 let roundCounter = 0;
 let totalRound = 3;
@@ -41,6 +42,7 @@ rulesModalxMark.addEventListener("click", closeRulesModal);
 openPlaygroundBoardBtn.addEventListener("click", openPlaygroundBoard);
 totalRoundButtons.forEach((totalRoundBtn) => totalRoundBtn.addEventListener("click", getTotalRound));
 userOptions.forEach((userOption) => userOption.addEventListener("click", playGame));
+winnerModalxMark.addEventListener("click", closeWinnerModal);
 nextGameBtn.addEventListener("click", nextRound);
 startNewGameBtn.addEventListener("click", startNewGame);
 
@@ -120,12 +122,21 @@ function closeRulesModal() {
     rulesModalContainer.classList.add("hide");
   }, 400);
 }
-// Close the modal on window click
+// Close the rules modal on window click
 window.addEventListener("click", e => {
   if (e.target === rulesModalContainer) {
     closeRulesModal();
   }
 });
+
+// Close winner modal
+function closeWinnerModal() {
+  winnerModal.classList.add("animate__zoomOut");
+  setTimeout(() => {
+    winnerModalContainer.classList.add("hide");
+    winnerModal.classList.remove("animate__zoomIn");
+  }, 400);
+}
 
 /**
  * Provide transition from main page to playground page
@@ -344,7 +355,6 @@ function playGame(e) {
   renderRoundWinner(winner);
   countScores(winner);
   getGameWinner(userScore, cpuScore);
-
 }
 
 /**
@@ -373,9 +383,6 @@ function finishGame() {
       winnerModalContainer.classList.remove("hide");
       winnerModal.classList.add("animate__zoomIn");
     }, 2000);
-    userScore = 0;
-    cpuScore = 0;
-    roundCounter = 0;
   }
 }
 
