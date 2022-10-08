@@ -274,6 +274,10 @@ h2 {
   cursor: pointer;
 }
 
+.selected__round {
+  background: #f07470;
+}
+
 .modal__rules-btn,
 .play__btn {
   background: #1b1c47;
