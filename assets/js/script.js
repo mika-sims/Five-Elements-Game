@@ -26,8 +26,9 @@ const cpuScoreBoard = document.querySelector(".cpu__score");
 const totalRoundButtons = document.querySelectorAll(".total__round-btn");
 const winnerModalContainer = document.querySelector(".game__winner-modal-container");
 const winnerModal = document.querySelector(".game__winner-modal");
+const winnerTextContainer = document.querySelector(".game__winner-text");
 const startNewGameBtn = document.querySelector(".new__game-btn");
-let roundCounter = 1;
+let roundCounter = 0;
 let totalRound = 3;
 let userScore = 0;
 let cpuScore = 0;
@@ -178,8 +179,6 @@ function nextRound() {
     resultBoard.classList.add("hide");
   }, 750);
   removeDisabledAttribute();
-  let rounds = countRounds();
-  finishGame(rounds);
 }
 
 /**
@@ -247,14 +246,20 @@ function renderCpuChoice(choice) {
 }
 
 /**
- * Count and render the rounds
+ * Count the rounds
  */
 function countRounds() {
   roundCounter += 1;
-  setTimeout(() => {
-    roundContainer.innerHTML = `ROUND ${roundCounter}`;
-  }, 500);
+  renderRound();
   return roundCounter;
+}
+
+/**
+ * Render the round
+ */
+
+function renderRound() {
+  roundContainer.innerHTML = `ROUND ${roundCounter}`;
 }
 
 
@@ -338,28 +343,49 @@ function playGame(e) {
   let winner = roundWinner(userChoice, cpuChoice);
   renderRoundWinner(winner);
   countScores(winner);
+  getGameWinner(userScore, cpuScore);
 
 }
 
+/**
+ * Determine the winner of the game and render
+ */
 
-function finishGame(rounds) {
-  if (rounds == Number(totalRound) + 1) {
-    winnerModal.classList.remove("animate__zoomOut");
-    winnerModalContainer.classList.remove("hide");
-    winnerModal.classList.add("animate__zoomIn");
+function getGameWinner(userScore, cpuScore) {
+  if (userScore > cpuScore) {
+    winnerTextContainer.innerHTML = "YOU WON THIS GAME";
+  }
+  else if (cpuScore > userScore) {
+    winnerTextContainer.innerHTML = "CPU WON THIS GAME";
+  }
+  else {
+    winnerTextContainer.innerHTML = "IT'S A DRAW";
+  }
+
+  finishGame();
+}
+
+function finishGame() {
+  let rounds = countRounds();
+  if (rounds == totalRound) {
+    setTimeout(() => {
+      winnerModal.classList.remove("animate__zoomOut");
+      winnerModalContainer.classList.remove("hide");
+      winnerModal.classList.add("animate__zoomIn");
+    }, 2000);
     userScore = 0;
-    userScoreBoard.innerHTML = 0;
     cpuScore = 0;
-    cpuScoreBoard.innerHTML = 0;
-    roundCounter = 1;
-    roundContainer.innerHTML = "ROUND 1";
+    roundCounter = 0;
   }
 }
 
 function startNewGame() {
-  winnerModal.classList.add("animate__zoomOut");
-  winnerModal.classList.remove("animate__zoomIn");
+  userScoreBoard.innerHTML = 0;
+  cpuScoreBoard.innerHTML = 0;
+  roundContainer.innerHTML = "ROUND 0";
+  nextRound();
   setTimeout(() => {
     winnerModalContainer.classList.add("hide");
   }, 500);
 }
+
