@@ -188,7 +188,6 @@ function nextRound() {
 
 function getTotalRound(e) {
   totalRound = e.target.innerHTML;
-  console.log(totalRound);
   return totalRound;
 }
 
