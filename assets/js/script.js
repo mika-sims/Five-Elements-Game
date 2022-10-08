@@ -136,12 +136,13 @@ function closeWinnerModal() {
     winnerModalContainer.classList.add("hide");
     winnerModal.classList.remove("animate__zoomIn");
   }, 400);
+  startNewGame();
 }
 
 // Close the winner modal on window click
 window.addEventListener("click", e => {
   if (e.target === winnerModalContainer) {
-    closeWinnerModal();
+    startNewGame();
   }
 });
 
@@ -385,6 +386,8 @@ function getGameWinner(userScore, cpuScore) {
 function finishGame() {
   let rounds = countRounds();
   if (rounds == totalRound) {
+    nextGameBtn.classList.add("hide");
+    nextGameBtn.setAttribute("disabled", "");
     setTimeout(() => {
       winnerModal.classList.remove("animate__zoomOut");
       winnerModalContainer.classList.remove("hide");
@@ -397,10 +400,18 @@ function startNewGame() {
   userScore = 0;
   cpuScore = 0;
   roundCounter = 0;
+  setTimeout(() => {
+    nextGameBtn.classList.remove("hide");
+    nextGameBtn.removeAttribute("disabled", "");
+  }, 500);
   userScoreBoard.innerHTML = 0;
   cpuScoreBoard.innerHTML = 0;
   roundContainer.innerHTML = "ROUND 0";
+  winnerModal.classList.add("animate__zoomOut");
+  setTimeout(() => {
+    winnerModalContainer.classList.add("hide");
+    winnerModal.classList.remove("animate__zoomIn");
+  }, 400);
   nextRound();
-  closeWinnerModal();
 }
 
