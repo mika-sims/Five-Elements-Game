@@ -15,14 +15,14 @@
 
 <body>
   <!-- Page preloader section -->
-  <div class="preloader">
+  <div class="preloader hide">
     <div class="img__container">
       <img class="preloader__img" src="assets/images/fire.svg" alt="">
     </div>
     <p class="loading__text">Loading...</p>
   </div>
   <!-- Main page section -->
-  <section class="main__page animate__animated">
+  <section class="main__page animate__animated hide">
     <header class="header">
       <h1 class="page__heading"> Five elements game</h1>
     </header>
@@ -43,16 +43,24 @@
   <!-- Modals section -->
   <section class="modals">
     <!-- Welcome modal -->
-    <div class="welcome__modal-container animate__animated hide">
+    <div class="welcome__modal-container animate__animated">
       <div class="welcome__modal animate__animated">
         <img class="welcome__modal-x-mark" src="assets/images/x-mark.svg" alt="x-mark icon">
         <h2>Welcome to the Five Elements Game</h2>
         <p><span>Before starting; </span></p>
         <p>Do you want to take a look at the rules of the game?</p>
+        <button type="button" class="modal__rules-btn rules__btn">RULES</button>
         <p>or</p>
         <p>Do you want to start playing right away?</p>
+        <p>if so</p>
+        <p>Select the total number of rounds you want to play and click the PLAY button</p>
+        <div class="round__btn-container">
+          <button type="button" class="total__round-btn">3</button>
+          <button type="button" class="total__round-btn">5</button>
+          <button type="button" class="total__round-btn">7</button>
+        </div>
         <div class="welcome__modal-buttons">
-          <button type="button" class="modal__rules-btn rules__btn">RULES</button>
+
           <button type="button" class="play__btn">PLAY</button>
         </div>
       </div>
