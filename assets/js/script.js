@@ -204,10 +204,17 @@ function nextRound() {
  * Get the total number of rounds from users input
  */
 
+// Selected button variable
+let previouslyClickedBtn = null;
+
 function getTotalRound(e) {
   totalRound = e.target.innerHTML;
+  e.target.classList.add("selected__round");
+  totalRoundButtons.forEach((totalRoundBtn => totalRoundBtn !== e.target && totalRoundBtn.classList.remove("selected__round")));
   return totalRound;
 }
+
+
 
 /**
  * Get user choice
