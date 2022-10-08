@@ -225,12 +225,11 @@ h2 {
 .welcome__modal {
   position: relative;
   width: 300px;
-  height: 360px;
+  height: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1em;
+  justify-content: space-evenly;
   background: #e9f3ff;
   padding: 1em;
   text-align: center;
@@ -248,6 +247,7 @@ h2 {
   font-size: 1em;
   text-transform: uppercase;
   color: #1b1c47;
+  margin-top: 2em;
 }
 
 .welcome__modal p {
@@ -255,8 +255,25 @@ h2 {
   color: #1b1c47;
 }
 
+.round__btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.total__round-btn {
+  font-size: 1em;
+  font-weight: 600;
+  background: #315079;
+  color: #e9f3ff;
+  padding: 0.1em 0.6em;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
 .welcome__modal-buttons {
-  position: absolute;
   bottom: 1em;
   display: flex;
   gap: 2em;
@@ -275,7 +292,7 @@ h2 {
 @media screen and (min-width: 600px) {
   .welcome__modal {
     width: 500px;
-    height: 400px;
+    height: 580px;
   }
 
   .welcome__modal > h2 {
