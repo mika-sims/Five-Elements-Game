@@ -1,8 +1,9 @@
-
 /*========== GLOBAL VARIABLES ==========*/
 const mainPage = document.querySelector(".main__page");
 const openPlaygroundBoardBtn = document.querySelector(".open__playground-btn");
-const welcomeModalContainer = document.querySelector(".welcome__modal-container");
+const welcomeModalContainer = document.querySelector(
+  ".welcome__modal-container"
+);
 const welcomeModal = document.querySelector(".welcome__modal");
 const welcomeModalxMark = document.querySelector(".welcome__modal-x-mark");
 const playBtn = document.querySelector(".play__btn");
@@ -24,7 +25,9 @@ const roundContainer = document.querySelector(".round__container");
 const userScoreBoard = document.querySelector(".user__score");
 const cpuScoreBoard = document.querySelector(".cpu__score");
 const totalRoundButtons = document.querySelectorAll(".total__round-btn");
-const winnerModalContainer = document.querySelector(".game__winner-modal-container");
+const winnerModalContainer = document.querySelector(
+  ".game__winner-modal-container"
+);
 const winnerModal = document.querySelector(".game__winner-modal");
 const winnerTextContainer = document.querySelector(".game__winner-text");
 const winnerModalxMark = document.querySelector(".winner__modal-x-mark");
@@ -35,26 +38,31 @@ let userScore = 0;
 let cpuScore = 0;
 
 /*========== EVENT LISTENERS ==========*/
-rulesButtons.forEach((rulesBtn) => rulesBtn.addEventListener("click", openRulesModal));
+rulesButtons.forEach((rulesBtn) =>
+  rulesBtn.addEventListener("click", openRulesModal)
+);
 welcomeModalxMark.addEventListener("click", closeWelcomeModal);
 playBtn.addEventListener("click", closeWelcomeModal);
 rulesModalxMark.addEventListener("click", closeRulesModal);
 openPlaygroundBoardBtn.addEventListener("click", openPlaygroundBoard);
-totalRoundButtons.forEach((totalRoundBtn) => totalRoundBtn.addEventListener("click", getTotalRound));
-userOptions.forEach((userOption) => userOption.addEventListener("click", playGame));
+totalRoundButtons.forEach((totalRoundBtn) =>
+  totalRoundBtn.addEventListener("click", getTotalRound)
+);
+userOptions.forEach((userOption) =>
+  userOption.addEventListener("click", playGame)
+);
 winnerModalxMark.addEventListener("click", closeWinnerModal);
 nextGameBtn.addEventListener("click", nextRound);
 startNewGameBtn.addEventListener("click", startNewGame);
 
 // Object of options and their sources
 const options = {
-  "fire": "assets/images/fire.svg",
-  "wood": "assets/images/wood.svg",
-  "water": "assets/images/water.svg",
-  "metal": "assets/images/metal.svg",
-  "earth": "assets/images/earth.svg"
+  fire: "assets/images/fire.svg",
+  wood: "assets/images/wood.svg",
+  water: "assets/images/water.svg",
+  metal: "assets/images/metal.svg",
+  earth: "assets/images/earth.svg",
 };
-
 
 /* ========== PRELOADER SECTION FUNCTIONALITY ========== */
 /**
@@ -103,7 +111,7 @@ function closeWelcomeModal() {
   }, 500);
 }
 // Close the modal on window click
-window.addEventListener("click", e => {
+window.addEventListener("click", (e) => {
   if (e.target === welcomeModalContainer) {
     closeWelcomeModal();
   }
@@ -123,7 +131,7 @@ function closeRulesModal() {
   }, 400);
 }
 // Close the rules modal on window click
-window.addEventListener("click", e => {
+window.addEventListener("click", (e) => {
   if (e.target === rulesModalContainer) {
     closeRulesModal();
   }
@@ -140,7 +148,7 @@ function closeWinnerModal() {
 }
 
 // Close the winner modal on window click
-window.addEventListener("click", e => {
+window.addEventListener("click", (e) => {
   if (e.target === winnerModalContainer) {
     startNewGame();
   }
@@ -206,7 +214,11 @@ function nextRound() {
 function getTotalRound(e) {
   totalRound = e.target.innerHTML;
   e.target.classList.add("selected__round");
-  totalRoundButtons.forEach((totalRoundBtn => totalRoundBtn !== e.target && totalRoundBtn.classList.remove("selected__round")));
+  totalRoundButtons.forEach(
+    (totalRoundBtn) =>
+      totalRoundBtn !== e.target &&
+      totalRoundBtn.classList.remove("selected__round")
+  );
   return totalRound;
 }
 
@@ -282,7 +294,6 @@ function renderRound() {
   roundContainer.innerHTML = `ROUND ${roundCounter}`;
 }
 
-
 /**
  * Count and render scores
  */
@@ -294,15 +305,13 @@ function countScores(winner) {
       userScoreBoard.innerHTML = `${userScore}`;
     }, 1500);
     return userScore;
-
   } else if (winner === "cpu") {
     cpuScore += 1;
     setTimeout(() => {
       cpuScoreBoard.innerHTML = `${cpuScore}`;
     }, 1500);
     return cpuScore;
-  }
-  else {
+  } else {
     return userScore, cpuScore;
   }
 }
@@ -313,23 +322,32 @@ function countScores(winner) {
 function roundWinner(user, cpu) {
   if (user === cpu) {
     return "draw";
-  }
-  else if (user === "fire" && cpu === "wood" || user === "fire" && cpu === "metal") {
+  } else if (
+    (user === "fire" && cpu === "wood") ||
+    (user === "fire" && cpu === "metal")
+  ) {
     return "user";
-  }
-  else if (user === "wood" && cpu === "water" || user === "wood" && cpu === "earth") {
+  } else if (
+    (user === "wood" && cpu === "water") ||
+    (user === "wood" && cpu === "earth")
+  ) {
     return "user";
-  }
-  else if (user === "water" && cpu === "metal" || user === "water" && cpu === "fire") {
+  } else if (
+    (user === "water" && cpu === "metal") ||
+    (user === "water" && cpu === "fire")
+  ) {
     return "user";
-  }
-  else if (user === "metal" && cpu === "earth" || user === "metal" && cpu === "wood") {
+  } else if (
+    (user === "metal" && cpu === "earth") ||
+    (user === "metal" && cpu === "wood")
+  ) {
     return "user";
-  }
-  else if (user === "earth" && cpu === "fire" || user === "earth" && cpu === "water") {
+  } else if (
+    (user === "earth" && cpu === "fire") ||
+    (user === "earth" && cpu === "water")
+  ) {
     return "user";
-  }
-  else {
+  } else {
     return "cpu";
   }
 }
@@ -373,11 +391,9 @@ function playGame(e) {
 function getGameWinner(userScore, cpuScore) {
   if (userScore > cpuScore) {
     winnerTextContainer.innerHTML = "YOU WON THIS GAME";
-  }
-  else if (cpuScore > userScore) {
+  } else if (cpuScore > userScore) {
     winnerTextContainer.innerHTML = "CPU WON THIS GAME";
-  }
-  else {
+  } else {
     winnerTextContainer.innerHTML = "IT'S A DRAW";
   }
 

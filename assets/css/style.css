@@ -67,13 +67,16 @@ h2 {
   0% {
     opacity: 0;
   }
+
   35% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 /* Page preloader media query */
 @media screen and (min-width: 600px) {
   .preloader__img {
@@ -143,9 +146,11 @@ h2 {
   0% {
     transform: scale(0.9);
   }
+
   50% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0.9);
   }
@@ -154,6 +159,7 @@ h2 {
 .main__page-bg-img {
   width: 180px;
 }
+
 /* Main page media query */
 @media screen and (min-width: 600px) {
   .page__heading {
@@ -401,6 +407,7 @@ h2 {
   text-transform: uppercase;
   word-spacing: 10px;
 }
+
 .new__game-btn {
   font-size: 1em;
   color: #0b0c30;
@@ -424,6 +431,7 @@ h2 {
     color: #1b1c47;
     font-size: 1.8em;
   }
+
   .new__game-btn {
     font-size: 1.1em;
     cursor: pointer;
@@ -573,6 +581,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 .user__options-container {
   position: relative;
   width: 300px;
@@ -602,6 +611,7 @@ h2 {
   right: 0;
   top: 6.5em;
 }
+
 #earth {
   left: 0;
   top: 6.5em;
@@ -650,6 +660,7 @@ h2 {
     right: 1.5em;
     top: 8em;
   }
+
   #earth {
     left: 1.5em;
     top: 8em;
@@ -683,6 +694,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 .result__board-container {
   display: flex;
   flex-direction: column;
@@ -790,12 +802,14 @@ h2 {
 .social__media-icon {
   width: 25px;
 }
+
 /* Footer section media query */
 @media screen and (min-width: 600px) {
   .footer {
     margin-top: 3em;
   }
 }
+
 /* Will be added dynamically  */
 .selected__round {
   background: #f07470;
