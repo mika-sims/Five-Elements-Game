@@ -138,6 +138,13 @@ function closeWinnerModal() {
   }, 400);
 }
 
+// Close the winner modal on window click
+window.addEventListener("click", e => {
+  if (e.target === winnerModalContainer) {
+    closeWinnerModal();
+  }
+});
+
 /**
  * Provide transition from main page to playground page
  */
@@ -391,8 +398,6 @@ function startNewGame() {
   cpuScoreBoard.innerHTML = 0;
   roundContainer.innerHTML = "ROUND 0";
   nextRound();
-  setTimeout(() => {
-    winnerModalContainer.classList.add("hide");
-  }, 500);
+  closeWinnerModal();
 }
 
