@@ -392,6 +392,18 @@ h2 {
   }
 }
 
+.scoreboard__icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5em;
+  margin-bottom: 1em;
+}
+
+.scoreboard__icons {
+  width: 20px;
+}
+
 .scoreboard__container {
   width: 280px;
   height: 70px;
@@ -442,6 +454,15 @@ h2 {
   .game__heading {
     font-size: 2em;
   }
+
+  .scoreboard__icons-container {
+    gap: 3.5em;
+  }
+
+  .scoreboard__icons {
+    width: 40px;
+  }
+
   .scoreboard__container {
     width: 320px;
     height: 90px;
