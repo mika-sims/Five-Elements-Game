@@ -66,10 +66,6 @@ The colors of the icons have been chosen by considering the colors corresponding
 
 ![Icons color codes](assets/design_files/icons_color_code.png)
 
-The font color code used for dark backgrounds is #E9F3FF.
+All other colors are used as indicated in the image below.
 
-![Light coloroed texts color code](assets/design_files/light_colored_text_code.png)
-
-The following colors are used for text with a lighter background color, for CTAs, for background colors and hover effects.
-
-![Light coloroed texts color code](assets/design_files/other_color_codes.png)
+![Color codes and usage](assets/design_files/color_codes_and_usage.png)

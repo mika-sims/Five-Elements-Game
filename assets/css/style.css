@@ -331,7 +331,6 @@ h2 {
   .modal__rules-btn:hover,
   .lets__play-btn:hover,
   .play__btn:hover {
-    /* border: 2px solid #1b1c47; */
     background: #454792;
   }
 }
