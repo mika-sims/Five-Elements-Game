@@ -74,8 +74,7 @@ const options = {
  * Check creen hight and show the warning message on screens less than 440px high(probably landscape mode)
  */
 function screenSizewarning() {
-  if (window.screen.orientation.type ===
-    "landscape-primary" && window.screen.availHeight < 480) {
+  if (window.screen.height < 480) {
     warningMessage.classList.remove("hide");
   }
   else {
