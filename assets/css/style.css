@@ -368,6 +368,18 @@ h2 {
   cursor: pointer;
 }
 
+/* Round selection modal media query */
+@media screen and (min-width: 600px) {
+  .round__selection-modal {
+    width: 450px;
+    height: 380px;
+  }
+
+  .total__round-btn {
+    font-size: 1.3em;
+  }
+}
+
 /* Rules modal */
 .rules__modal {
   position: relative;
