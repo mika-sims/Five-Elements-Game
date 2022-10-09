@@ -350,6 +350,11 @@ h2 {
   text-align: center;
 }
 
+.play__span {
+  font-weight: 700;
+  color: #454792;
+}
+
 .round__btn-container {
   display: flex;
   align-items: center;
