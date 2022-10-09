@@ -247,8 +247,8 @@ h2 {
 }
 
 .warning__modal {
-  width: 80%;
-  height: 250px;
+  width: 290px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,22 +260,22 @@ h2 {
 /* Welcome modal */
 .welcome__modal {
   position: relative;
-  width: 280px;
-  height: 460px;
+  width: 290px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   background: #e9f3ff;
-  padding: 1em;
+  padding: 0.5em;
   text-align: center;
 }
 
 .welcome__modal-x-mark,
 .rules__modal-x-mark {
   position: absolute;
-  right: 1em;
-  top: 1em;
+  right: 0.6em;
+  top: 0.6em;
   width: 25px;
 }
 
@@ -338,8 +338,8 @@ h2 {
 
 /* Round selection modal */
 .round__selection-modal {
-  width: 280px;
-  height: 380px;
+  width: 290px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -359,6 +359,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 2em;
+  margin-bottom: 0.5em;
 }
 
 .total__round-btn {
@@ -391,24 +392,20 @@ h2 {
 /* Rules modal */
 .rules__modal {
   position: relative;
-  width: 280px;
-  height: 460px;
+  width: 290px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   background: #e9f3ff;
-  gap: 1em;
+  gap: 0.5em;
 }
 
 .rules__modal h2 {
-  font-size: 1.1em;
+  font-size: 1em;
   text-transform: uppercase;
-}
-
-.rules__img {
-  width: 150px;
 }
 
 .rules__table {
@@ -433,10 +430,6 @@ th {
   .rules__modal {
     width: 400px;
     gap: 0.5em;
-  }
-
-  .rules__img {
-    width: 160px;
   }
 
   .rules__modal h2 {
@@ -466,22 +459,23 @@ th {
 
 .game__winner-modal {
   position: relative;
-  height: 390px;
-  width: 280px;
+  height: 310px;
+  width: 290px;
   background: #e3f3ff;
-  padding: 1em;
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.5em;
   align-items: center;
-  gap: 1.5em;
   text-align: center;
 }
 
 .game__winner-text {
   color: #1b1c47;
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 .new__game-btn {
