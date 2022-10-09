@@ -395,7 +395,7 @@ h2 {
   font-size: 0.8em;
 }
 
-/* Welcome modal media query */
+/* Rules modal media query */
 @media screen and (min-width: 600px) {
   .rules__modal {
     width: 500px;
