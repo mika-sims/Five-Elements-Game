@@ -403,8 +403,21 @@ h2 {
   width: 160px;
 }
 
-.rule {
-  font-size: 0.8em;
+.rules__table {
+  border-collapse: collapse;
+  font-size: 0.75em;
+}
+
+.rules__table td,
+th {
+  border: 1px solid #26263d;
+  text-align: left;
+  padding: 0.2em 1em;
+}
+
+.rules__table tr:nth-child(even) {
+  background: #6f98c9;
+  color: #ffffff;
 }
 
 /* Rules modal media query */
@@ -420,11 +433,11 @@ h2 {
   }
 
   .rules__img {
-    width: 240px;
+    width: 200px;
   }
 
-  .rule {
-    font-size: 1em;
+  .rules__table {
+    font-size: 0.9em;
   }
 }
 
