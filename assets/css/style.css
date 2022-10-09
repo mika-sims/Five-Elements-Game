@@ -54,7 +54,7 @@ h2 {
 }
 
 .loading__text {
-  color: aliceblue;
+  color: #e9f3ff;
   animation: fade-in-fade-out 0.5s ease-in-out infinite;
 }
 
@@ -128,7 +128,7 @@ h2 {
 }
 
 .main__page-text-content {
-  color: #f0f0f0;
+  color: #e9f3ff;
 }
 
 .open__playground-btn {
@@ -179,7 +179,7 @@ h2 {
   }
 
   .main__page-text-content {
-    color: #f0f0f0;
+    color: #e9f3ff;
     font-size: 1.2em;
   }
 
@@ -422,7 +422,7 @@ th {
 
 .rules__table tr:nth-child(even) {
   background: #6f98c9;
-  color: #ffffff;
+  color: #e9f3ff;
 }
 
 /* Rules modal media query */
@@ -480,7 +480,7 @@ th {
 
 .new__game-btn {
   font-size: 1em;
-  color: #0b0c30;
+  color: #1b1c47;
   border: 1px solid #454792;
   padding: 0.2em 1em;
   font-weight: 700;
@@ -570,7 +570,7 @@ th {
 }
 
 .round__container {
-  color: #d8dbdd;
+  color: #e9f3ff;
   background: #28456b;
   padding: 0.2em 1em;
   font-size: 1em;
@@ -796,20 +796,20 @@ th {
 }
 
 .chooser {
-  color: #cecece;
+  color: #e9f3ff;
   font-size: 1em;
   font-weight: 700;
 }
 
 .result__text {
-  color: #d8dbdd;
+  color: #e9f3ff;
   font-size: 1.8em;
   word-spacing: 10px;
 }
 
 .next__game-btn {
   color: #315079;
-  background: #d8dbdd;
+  background: #e9f3ff;
   padding: 0.3em 1em;
   font-size: 1em;
   text-transform: uppercase;
@@ -833,7 +833,7 @@ th {
   }
 
   .chooser {
-    color: #cecece;
+    color: #e9f3ff;
     font-size: 1.1em;
     font-weight: 700;
   }
