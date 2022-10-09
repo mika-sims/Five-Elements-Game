@@ -74,21 +74,12 @@ const options = {
  * Check creen hight and show the warning message on screens less than 440px high(probably landscape mode)
  */
 function screenSizewarning() {
-  let iosLandscape = window.innerWidth > window.innerHeight;
-  let androidLandscape = screen.availWidth > screen.availHeight;
-  let iosDevice = /iPhone|webOS|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  let androidDevice = /Android/i.test(navigator.userAgent);
+  let landscape = window.innerWidth > window.innerHeight;
+  let device = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   let height = screen.availHeight < 480;
 
-  if (iosDevice) {
-    if (iosLandscape && height) {
-      warningMessage.classList.remove("hide");
-    } else {
-      warningMessage.classList.add("hide");
-    }
-  }
-  if (androidDevice) {
-    if (androidLandscape && height) {
+  if (device) {
+    if (landscape && height) {
       warningMessage.classList.remove("hide");
     } else {
       warningMessage.classList.add("hide");
