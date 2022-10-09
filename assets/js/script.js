@@ -97,7 +97,7 @@ window.addEventListener("load", () => {
     }, 1000);
     // Stop interval
     clearInterval(preloaderInterval);
-  }, 4700);
+  }, 2350);
 });
 
 // Will be used in image iteration
@@ -118,7 +118,7 @@ function preloader() {
 /**
  * Assign setInterval to a variable and call the preloader function inside the setInterval function to iterate every 1000 seconds.
  */
-let preloaderInterval = setInterval(preloader, 1000);
+let preloaderInterval = setInterval(preloader, 500);
 
 /*========== OPEN AND CLOSE THE MODALS FUNCTIONALITY ==========*/
 

@@ -50,12 +50,12 @@ h2 {
 
 .preloader__img {
   width: 100px;
-  animation: fade-in-fade-out 1s ease-in-out infinite;
+  animation: fade-in-fade-out 0.5s ease-in-out infinite;
 }
 
 .loading__text {
   color: aliceblue;
-  animation: fade-in-fade-out 1s ease-in-out infinite;
+  animation: fade-in-fade-out 0.5s ease-in-out infinite;
 }
 
 .hide__preloader {
