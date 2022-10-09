@@ -624,11 +624,16 @@ h2 {
 
 .user__option {
   position: absolute;
+  transition: 0.3s ease;
 }
 
 .user__option-img {
   width: 70%;
   pointer-events: none;
+}
+
+.user__option:hover {
+  transform: scale(1.1);
 }
 
 #fire {
