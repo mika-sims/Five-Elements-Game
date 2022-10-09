@@ -8,6 +8,9 @@ const welcomeModalContainer = document.querySelector(
 const welcomeModal = document.querySelector(".welcome__modal");
 const welcomeModalxMark = document.querySelector(".welcome__modal-x-mark");
 const letsPlayBtn = document.querySelector(".lets__play-btn");
+const roundSelectionModalContainer = document.querySelector(".round__selection-modal-container");
+const roundSelectionModal = document.querySelector(".round__selection-modal");
+const startGameBtn = document.querySelector(".play__btn");
 const rulesButtons = document.querySelectorAll(".rules__btn");
 const rulesModalxMark = document.querySelector(".rules__modal-x-mark");
 const rulesModalContainer = document.querySelector(".rules__modal-container");
@@ -46,6 +49,7 @@ rulesButtons.forEach((rulesBtn) =>
 welcomeModalxMark.addEventListener("click", closeWelcomeModal);
 letsPlayBtn.addEventListener("click", closeWelcomeModal);
 rulesModalxMark.addEventListener("click", closeRulesModal);
+startGameBtn.addEventListener("click", closeRoundSelectionModal);
 openPlaygroundBoardBtn.addEventListener("click", openPlaygroundBoard);
 totalRoundButtons.forEach((totalRoundBtn) =>
   totalRoundBtn.addEventListener("click", getTotalRound)
@@ -125,6 +129,7 @@ function closeWelcomeModal() {
   setTimeout(() => {
     welcomeModalContainer.classList.add("hide");
   }, 500);
+  openRoundSelectionModal();
 }
 // Close the modal on window click
 window.addEventListener("click", (e) => {
@@ -132,6 +137,21 @@ window.addEventListener("click", (e) => {
     closeWelcomeModal();
   }
 });
+
+// Open round selection modal
+function openRoundSelectionModal() {
+  roundSelectionModalContainer.classList.remove("hide");
+  roundSelectionModal.classList.remove("animate__fadeOutDownBig");
+  roundSelectionModal.classList.add("animate__fadeInDownBig");
+}
+
+function closeRoundSelectionModal() {
+  roundSelectionModal.classList.remove("animate__fadeInDownBig");
+  roundSelectionModal.classList.add("animate__fadeOutDownBig");
+  setTimeout(() => {
+    roundSelectionModalContainer.classList.add("hide");
+  }, 400);
+}
 
 // Open/Close rules modal
 function openRulesModal() {
