@@ -77,3 +77,17 @@ All other colors are used as indicated in the image below.
 ![Color codes and usage](assets/design_files/color_codes_and_usage.png)
 
 [Back to top](#contents)
+
+### Imagery
+
+- Game Icons
+
+I downloaded the SVG image on [this](https://www.mosherhealth.com/mosher-health-system/chinese-medicine/yin-yang/five-elements) site that came across in the Five Element SVG search on Google and opened it with [Figma](https://www.figma.com/). After restyling the icons in Figma, I placed them on the web page. The original image is below.
+
+![Icons original image](assets/design_files/icons_original_img.svg)
+
+- Body background image
+
+I found this image as a result of google searches. The original image was in .jpg format. I converted this image to svg format using [this](https://convertio.co/jpg-svg/) site and then re-styled it with Figma. The original image is below.
+
+![Icons original image](assets/design_files/body_bg_img_original.png)
