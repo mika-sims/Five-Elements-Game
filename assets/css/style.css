@@ -247,8 +247,8 @@ h2 {
 }
 
 .warning__modal {
-  width: 460px;
-  height: 300px;
+  width: 80%;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,7 +260,7 @@ h2 {
 /* Welcome modal */
 .welcome__modal {
   position: relative;
-  width: 300px;
+  width: 280px;
   height: 460px;
   display: flex;
   flex-direction: column;
@@ -304,8 +304,7 @@ h2 {
 /* Welcome modal media query */
 @media screen and (min-width: 600px) {
   .welcome__modal {
-    width: 500px;
-    height: 580px;
+    width: 400px;
   }
 
   .welcome__modal > h2 {
@@ -339,7 +338,7 @@ h2 {
 
 /* Round selection modal */
 .round__selection-modal {
-  width: 300px;
+  width: 280px;
   height: 380px;
   display: flex;
   flex-direction: column;
@@ -376,8 +375,12 @@ h2 {
 /* Round selection modal media query */
 @media screen and (min-width: 600px) {
   .round__selection-modal {
-    width: 450px;
-    height: 380px;
+    width: 420px;
+    height: 320px;
+  }
+
+  .round__selection-modal p {
+    font-size: 1.2em;
   }
 
   .total__round-btn {
@@ -388,7 +391,7 @@ h2 {
 /* Rules modal */
 .rules__modal {
   position: relative;
-  width: 300px;
+  width: 280px;
   height: 460px;
   display: flex;
   flex-direction: column;
@@ -405,7 +408,7 @@ h2 {
 }
 
 .rules__img {
-  width: 160px;
+  width: 150px;
 }
 
 .rules__table {
@@ -417,7 +420,7 @@ h2 {
 th {
   border: 1px solid #26263d;
   text-align: left;
-  padding: 0.2em 1em;
+  padding: 0.1em 0.8em;
 }
 
 .rules__table tr:nth-child(even) {
@@ -428,21 +431,20 @@ th {
 /* Rules modal media query */
 @media screen and (min-width: 600px) {
   .rules__modal {
-    width: 500px;
-    height: 600px;
-    gap: 1em;
-  }
-
-  .rules__modal h2 {
-    font-size: 1.3em;
+    width: 400px;
+    gap: 0.5em;
   }
 
   .rules__img {
-    width: 200px;
+    width: 160px;
+  }
+
+  .rules__modal h2 {
+    font-size: 1.2em;
   }
 
   .rules__table {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
 
@@ -465,7 +467,7 @@ th {
 .game__winner-modal {
   position: relative;
   height: 390px;
-  width: 290px;
+  width: 280px;
   background: #e3f3ff;
   padding: 1em;
   display: flex;
@@ -480,7 +482,6 @@ th {
   color: #1b1c47;
   font-size: 1.2em;
   text-transform: uppercase;
-  word-spacing: 10px;
 }
 
 .new__game-btn {
