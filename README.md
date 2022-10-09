@@ -5,3 +5,45 @@ The Five Elements Game is an extended variation of the classic Rock Paper Scisso
 You can view the live site here - <a href="https://mika-sims.github.io/Five-Elements-Game/" target="_blank" rel="noopener">Five Elements Game</a>
 
 <img src="assets/images/five_elements_game.gif" alt="game promo gif" />
+
+# Contents
+
+- [**User Experience UX**](#user-experience-ux)
+  - [User Stories](#user-stories)
+  - [Wireframes](#wireframes)
+  - [Site Structure](#site-structure)
+  - [Design Choices](#design-choices)
+  - [Typography](#typography)
+  - [Colour Scheme](#colour-scheme)
+
+# User Experience UX
+
+## User Stories
+
+- As a user, I want to be able to understand the purpose of Five Elements Game from the main page.
+- As a user, would like to see the title and images that give information about the content of the game.
+- As a user, I would like to see how I can navigate the page with CTAs.
+- As a user, I don't have to just click x-mark to close modals
+- As a user, I would lik to see the rules of the game.
+- As a user, I would like to see different round options available.
+- As a user, I would like to see descriptive images of the choices I will make.
+- As a user, I would like to be able to see the rules whenever I want while playing the game.
+- As a user, I would like to see my and my opponent's scores on the scoreboard.
+- As a user, I would like to see the round on the scoreboard.
+- As a user, I would like to see a decisive effect when I hover over the option I want to select.
+- As a user, I would like to see an effect that shows the round winner for each round played.
+- As a user, I would like to see an effect that also clearly shows the draw.
+- As a user, I would like to see a modal that shows the winner of the game when the game is over.
+- As a user, I would like to see an option to play a new game after the game is over
+- As a user, I want a default game to start even if I do not choose the total round I want to play.
+- As a user, I would like to see social media icons
+
+[Back to top](#contents)
+
+## Wireframes
+
+Wireframes were designed using [Balsamiq](https://balsamiq.com). Although wireframes show a very basic and simple design, a different result was obtained by modeling ideas and other sources that came to mind during the project development phase.
+
+Wireframes design fils can be find at [Wireframe](assets/wireframes) image folder.
+
+[Back to top](#contents)
