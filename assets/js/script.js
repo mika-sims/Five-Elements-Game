@@ -7,7 +7,7 @@ const welcomeModalContainer = document.querySelector(
 );
 const welcomeModal = document.querySelector(".welcome__modal");
 const welcomeModalxMark = document.querySelector(".welcome__modal-x-mark");
-const playBtn = document.querySelector(".play__btn");
+const letsPlayBtn = document.querySelector(".lets__play-btn");
 const rulesButtons = document.querySelectorAll(".rules__btn");
 const rulesModalxMark = document.querySelector(".rules__modal-x-mark");
 const rulesModalContainer = document.querySelector(".rules__modal-container");
@@ -44,7 +44,7 @@ rulesButtons.forEach((rulesBtn) =>
   rulesBtn.addEventListener("click", openRulesModal)
 );
 welcomeModalxMark.addEventListener("click", closeWelcomeModal);
-playBtn.addEventListener("click", closeWelcomeModal);
+letsPlayBtn.addEventListener("click", closeWelcomeModal);
 rulesModalxMark.addEventListener("click", closeRulesModal);
 openPlaygroundBoardBtn.addEventListener("click", openPlaygroundBoard);
 totalRoundButtons.forEach((totalRoundBtn) =>
