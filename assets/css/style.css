@@ -206,7 +206,8 @@ h2 {
 /* Welcome and Rules modals global styles*/
 .welcome__modal-container,
 .rules__modal-container,
-.warning__modal-container {
+.warning__modal-container,
+.round__selection-modal-container {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -260,7 +261,7 @@ h2 {
 .welcome__modal {
   position: relative;
   width: 300px;
-  height: 480px;
+  height: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -290,25 +291,8 @@ h2 {
   color: #1b1c47;
 }
 
-.round__btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-}
-
-.total__round-btn {
-  font-size: 1em;
-  font-weight: 600;
-  background: #315079;
-  color: #e9f3ff;
-  padding: 0.1em 0.6em;
-  border-radius: 50%;
-  text-align: center;
-  cursor: pointer;
-}
-
 .modal__rules-btn,
+.lets__play-btn,
 .play__btn {
   background: #1b1c47;
   color: #e9f3ff;
@@ -338,6 +322,7 @@ h2 {
   }
 
   .modal__rules-btn,
+  .lets__play-btn,
   .play__btn {
     font-size: 1.2em;
     transition: 0.2s ease-in-out;
@@ -345,10 +330,42 @@ h2 {
   }
 
   .modal__rules-btn:hover,
+  .lets__play-btn:hover,
   .play__btn:hover {
     /* border: 2px solid #1b1c47; */
     background: #454792;
   }
+}
+
+/* Round selection modal */
+.round__selection-modal {
+  width: 300px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #e9f3ff;
+  padding: 1em;
+  text-align: center;
+}
+
+.round__btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.total__round-btn {
+  font-size: 1em;
+  font-weight: 600;
+  background: #315079;
+  color: #e9f3ff;
+  padding: 0.1em 0.6em;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* Rules modal */
