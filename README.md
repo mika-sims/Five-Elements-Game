@@ -11,10 +11,12 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
 - [**User Experience UX**](#user-experience-ux)
   - [User Stories](#user-stories)
   - [Wireframes](#wireframes)
-  - [Site Structure](#site-structure)
-  - [Design Choices](#design-choices)
-  - [Typography](#typography)
-  - [Colour Scheme](#colour-scheme)
+  - [Design](#design)
+    - [Typography](#typography)
+    - [Colour Scheme](#colour-scheme)
+    - [Imagery](#imagery)
+    - [Icons and Illustrations](#icons-and-illustrations)
+    - [Logo and Favicon](#logo-and-favicon)
 
 # User Experience UX
 
@@ -52,9 +54,13 @@ Wireframes design fils can be find at [Wireframes](assets/wireframes) folder.
 
 The page design has emerged as a result of a long-term research. The main design of the page was developed by modeling a challenge on the [Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH) site.
 
+[Back to top](#contents)
+
 ### Typography
 
 Two fonts are preferred to have a simple design. Fonts are imported using the googlefonts API. "Poppins" is used in the body of the page and in all CTAs, "Roboto Condensed" in all titles, and the sans-serif font family is used as the fallback of both fonts.
+
+[Back to top](#contents)
 
 ### Colour Scheme
 
@@ -69,3 +75,5 @@ The colors of the icons have been chosen by considering the colors corresponding
 All other colors are used as indicated in the image below.
 
 ![Color codes and usage](assets/design_files/color_codes_and_usage.png)
+
+[Back to top](#contents)
