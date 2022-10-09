@@ -1,4 +1,5 @@
 /*========== GLOBAL VARIABLES ==========*/
+const warningMessage = document.querySelector(".warning__modal-container");
 const mainPage = document.querySelector(".main__page");
 const openPlaygroundBoardBtn = document.querySelector(".open__playground-btn");
 const welcomeModalContainer = document.querySelector(
@@ -38,6 +39,7 @@ let userScore = 0;
 let cpuScore = 0;
 
 /*========== EVENT LISTENERS ==========*/
+window.addEventListener("resize", screenSizewarning);
 rulesButtons.forEach((rulesBtn) =>
   rulesBtn.addEventListener("click", openRulesModal)
 );
@@ -63,6 +65,19 @@ const options = {
   metal: "assets/images/metal.svg",
   earth: "assets/images/earth.svg",
 };
+
+/**
+ * Check creen hight and show the warning message on screens less than 440px high(probably landscape mode)
+ */
+function screenSizewarning() {
+  if (screen.availHeight < 440) {
+    warningMessage.classList.remove("hide");
+  }
+  else {
+    warningMessage.classList.add("hide");
+  }
+}
+
 
 /* ========== PRELOADER SECTION FUNCTIONALITY ========== */
 /**
