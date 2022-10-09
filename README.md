@@ -4,7 +4,7 @@ The Five Elements Game is an extended variation of the classic Rock Paper Scisso
 
 You can view the live site here - \*\* [Five Elements Game](https://mika-sims.github.io/Five-Elements-Game/)
 
-<img src="assets/images/five_elements_game.gif" alt="game promo gif" />
+<img src="assets/images/five_elements_game.gif" alt="game promo gif">
 
 # Contents
 
@@ -50,10 +50,26 @@ Wireframes design fils can be find at [Wireframes](assets/wireframes) folder.
 
 ## Design
 
-The page design has emerged as a result of a long-term research.
+The page design has emerged as a result of a long-term research. The main design of the page was developed by modeling a challenge on the [Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH) site.
 
 ### Typography
 
 Two fonts are preferred to have a simple design. Fonts are imported using the googlefonts API. "Poppins" is used in the body of the page and in all CTAs, "Roboto Condensed" in all titles, and the sans-serif font family is used as the fallback of both fonts.
 
-The main design of the page was developed by modeling a challenge on the [Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH) site.
+### Colour Scheme
+
+Body background color is a radial-gradient color consisting of the combination of colors with HEX codes #28456b and #1b1c47.
+
+![Body background color](assets/design_files/body_background_color.png)
+
+The colors of the icons have been chosen by considering the colors corresponding to these elements in nature.
+
+![Icons color codes](assets/design_files/icons_color_code.png)
+
+The font color code used for dark backgrounds is #E9F3FF.
+
+![Light coloroed texts color code](assets/design_files/light_colored_text_code.png)
+
+The following colors are used for text with a lighter background color, for CTAs, for background colors and hover effects.
+
+![Light coloroed texts color code](assets/design_files/other_color_codes.png)
