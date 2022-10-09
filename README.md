@@ -2,7 +2,7 @@
 
 The Five Elements Game is an extended variation of the classic Rock Paper Scissors game that many of us have played. The game has five elements (fire, earth, metal, water, wood) for the user to choose from. Each element defeats or is defeated by another element. In the classic game, we can predict the next move of the opponents according to their mimics, but in the Five Elements game, the opponent is the computer and computer's choices are completely random. Let's see if you can beat the computer...
 
-You can view the live site here - <a href="https://mika-sims.github.io/Five-Elements-Game/" target="_blank" rel="noopener">Five Elements Game</a>
+You can view the live site here - \*\* [Five Elements Game](https://mika-sims.github.io/Five-Elements-Game/)
 
 <img src="assets/images/five_elements_game.gif" alt="game promo gif" />
 
@@ -44,6 +44,16 @@ You can view the live site here - <a href="https://mika-sims.github.io/Five-Elem
 
 Wireframes were designed using [Balsamiq](https://balsamiq.com). Although wireframes show a very basic and simple design, a different result was obtained by modeling ideas and other sources that came to mind during the project development phase.
 
-Wireframes design fils can be find at [Wireframe](assets/wireframes) image folder.
+Wireframes design fils can be find at [Wireframes](assets/wireframes) folder.
 
 [Back to top](#contents)
+
+## Design
+
+The page design has emerged as a result of a long-term research.
+
+### Typography
+
+Two fonts are preferred to have a simple design. Fonts are imported using the googlefonts API. "Poppins" is used in the body of the page and in all CTAs, "Roboto Condensed" in all titles, and the sans-serif font family is used as the fallback of both fonts.
+
+The main design of the page was developed by modeling a challenge on the [Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH) site.
