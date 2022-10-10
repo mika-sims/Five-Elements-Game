@@ -22,9 +22,9 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
   - [Structure](#structure)
     - [Preloader](#preloader)
     - [Main Page](#main-page)
+    - [Modals](#modals)
     - [Playground Section](#playground-section)
     - [Result Section](#result-section)
-    - [Modals](#modals)
     - [Footer](#footer)
 
 # User Experience UX
@@ -132,5 +132,41 @@ Five Elements Game is a one-page website with a simple design. It provides the u
 Preloader is an animation in which the game icons are shown to the user at the page opening, rather than a preloader in the full sense. The "Loading..." text under the icons is also presented to the user to create the impression that the page is loading. However, taking longer than a normal preloader loading, may makes questioning whether this feature is necessary. But still, this is intended as part of the page's design rather than a page preloader.
 
 <img src="assets/design_files/preloader.gif">
+
+[Back to top](#contents)
+
+### Main Page
+
+After the preloader is fade-out, a very simple main page appears. It gives information about the page in simple and short writing and guides the user to the next section with animated CTA.
+
+<img src="assets/design_files/main_page.png" width="600">
+
+### Modals
+
+There are various modals to guide and inform the user about the game.
+
+- Greeting Modal
+
+After clicking the LET'S START button on the main page, the greeting modal opens. The greeting modal presents the user two options. To see the rules of the game or skip to the next section to play the game right away. When the RULES button is clicked in the greeting modal, a modal with the table showing the rules opens. The greeting modal also lags behind this modal, because the button that will take the user to the next section after the rules modal is closed is in this modal.
+
+<img src="assets/design_files/greeting_modal.png" width="300">
+
+- Rules Modal
+
+The rules modal presents the rules of the game in a table. The table has three columns and 11 rows. İlk satırda mağlubiyet, mağlubiyet ve bu iki başlık arasında mağlubiyetin hangi yöntemi kullandığını gösteren yer almaktadır. When the x-mark in the modal or outside the modal is clicked, the rules modal is closed. After the rules modal is closed, the greeting modal reappears. As in the rules modal, clicking the x-mark or outside of the modal in greeting modal closes the modal and moves to the next section.
+
+<img src="assets/design_files/rules_modal.png" width="300">
+
+- Round Selection Modal
+
+In this modal, the user is given three options for how many rounds they want to complete the game. The background of the item showing the selected number of rounds changes to a reddish color. If the PLAY button is clicked after the option is selected or without the option being selected, the playground section will be opened. If the user presses the PLAY button without choosing how many rounds to play, the game will be 3 Rounds by default. In order to close this model, it is necessary to click the PLAY button.
+
+<img src="assets/design_files/rounds_selection_modal.png" width="300">
+
+- Game Winner Modal
+
+The Game Winner modal appears automatically after the number of rounds to be played is over and shows the winner of the game with an animated text. Also, this modal prompts the user to play a new game or return to the homepage. In this modal, the user can select the number of rounds again or start a new game by clicking the x-mark in the modal or outside the modal.
+
+<img src="assets/design_files/game_winner_modal.png" width="300">
 
 [Back to top](#contents)
