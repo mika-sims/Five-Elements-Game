@@ -93,13 +93,19 @@ All other colors are used as indicated in the image below.
 
 I downloaded the SVG image on [this](https://www.mosherhealth.com/mosher-health-system/chinese-medicine/yin-yang/five-elements) site that came across in the Five Element SVG search on Google and opened it with [Figma](https://www.figma.com/). After restyling the icons in Figma, I placed them on the web page. The original image is below.
 
+<details>
+<summary>See Game Icons original image</summary>
 <img src="assets/design_files/icons_original_img.svg" width="600">
+</details>
 
 - Main page background image
 
 I found this image as a result of google searches. The original image was in .jpg format. I converted this image to svg format using [this](https://convertio.co/jpg-svg/) site and then re-styled it with Figma. The original image is below.
 
+<details>
+<summary>See Main page background image</summary>
 <img src="assets/design_files/body_bg_img_original.png" width="200">
+</details>
 
 - Game board background image
 
@@ -139,7 +145,12 @@ Preloader is an animation in which the game icons are shown to the user at the p
 
 After the preloader is fade-out, a very simple main page appears. It gives information about the page in simple and short writing and guides the user to the next section with animated CTA.
 
+<details>
+<summary>See  Main Page Image</summary>
 <img src="assets/design_files/main_page.png" width="600">
+</details>
+
+[Back to top](#contents)
 
 ### Modals
 
@@ -153,6 +164,7 @@ After clicking the LET'S START button on the main page, the greeting modal opens
 <summary>See Greeting Modal</summary>
 <img src="assets/design_files/greeting_modal.png" width="300">
 </details>
+<br>
 
 - Rules Modal
 
@@ -162,6 +174,7 @@ The rules modal presents the rules of the game in a table. The table has three c
 <summary>See Rules Modal</summary>
 <img src="assets/design_files/rules_modal.png" width="300">
 </details>
+<br>
 
 - Round Selection Modal
 
@@ -171,6 +184,7 @@ In this modal, the user is given three options for how many rounds they want to 
 <summary>See Round Selection Modal</summary>
 <img src="assets/design_files/rounds_selection_modal.png" width="300">
 </details>
+<br>
 
 - Game Winner Modal
 
@@ -180,5 +194,40 @@ The Game Winner modal appears automatically after the number of rounds to be pla
 <summary>See Game Winner Modal</summary>
 <img src="assets/design_files/game_winner_modal.png" width="300">
 </details>
+<br>
 
 [Back to top](#contents)
+
+### Playground Section
+
+The playground section, where the names of the icons in the game are used as the title, and under this title, the smaller versions of the icons are placed. The design of this section was inspired by the challenge on the Frontend Mentor site. Just below the icons, there is a RULES button so that the user can check it whenever needed. As with all sections, there are social media icons that lead to social media accounts at the bottom of this section.
+
+<details>
+<summary>See Game Winner Modal</summary>
+<img src="assets/design_files/playground_section.png" width="300">
+</details>
+<br>
+
+[Back to top](#contents)
+
+### Result Section
+
+The result section appears after the user has made the selection, with an animated transition and fade-out of the playground section and fade-in of the result section. The icon of the winning side is highlighted with a flash effect. If the result is a draw, the text DRAW is displayed in the same way. The winning side's score and round increase. Below the icons is the CTA that directs the user to play the next round. When the NEXT ROUND CTA is clicked, with fade-out and fade-in animation effect, the result section and the playground section are replaced.
+
+<details>
+<summary>See Game Winner Modal</summary>
+<img src="assets/design_files/result_section.png" width="300">
+</details>
+<br>
+
+[Back to top](#contents)
+
+### Footer
+
+In the footer section there are only two icons showing social media accounts. The colors are not very distinctive in order not to distract.
+
+<details>
+<summary>See Game Winner Modal</summary>
+<img src="assets/design_files/footer.png" width="300">
+</details>
+<br>
