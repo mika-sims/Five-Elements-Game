@@ -36,6 +36,7 @@ const winnerModal = document.querySelector(".game__winner-modal");
 const winnerTextContainer = document.querySelector(".game__winner-text");
 const winnerModalxMark = document.querySelector(".winner__modal-x-mark");
 const startNewGameBtn = document.querySelector(".new__game-btn");
+const reloadPageBtn = document.querySelector(".reload__page-btn");
 let roundCounter = 0;
 let totalRound = 3;
 let userScore = 0;
@@ -60,6 +61,7 @@ userOptions.forEach((userOption) =>
 winnerModalxMark.addEventListener("click", closeWinnerModal);
 nextGameBtn.addEventListener("click", nextRound);
 startNewGameBtn.addEventListener("click", startNewGame);
+reloadPageBtn.addEventListener("click", reloadPage);
 
 // Object of options and their sources
 const options = {
@@ -479,4 +481,8 @@ function startNewGame() {
     winnerModal.classList.remove("animate__zoomIn");
   }, 400);
   nextRound();
+}
+
+function reloadPage() {
+  window.location.reload();
 }

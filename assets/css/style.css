@@ -477,7 +477,13 @@ th {
   margin-bottom: 1em;
 }
 
-.new__game-btn {
+.winner__modal-buttons {
+  display: flex;
+  gap: 2em;
+}
+
+.new__game-btn,
+.reload__page-btn {
   font-size: 1em;
   color: #1b1c47;
   border: 1px solid #454792;
@@ -501,7 +507,8 @@ th {
     font-size: 1.8em;
   }
 
-  .new__game-btn {
+  .new__game-btn,
+  .reload__page-btn {
     font-size: 1.1em;
     cursor: pointer;
   }
