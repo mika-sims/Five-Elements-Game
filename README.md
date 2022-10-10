@@ -11,21 +11,33 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
 # Contents
 
 - [**User Experience UX**](#user-experience-ux)
+
   - [User Stories](#user-stories)
   - [Wireframes](#wireframes)
+  - [Structure](#structure)
   - [Design](#design)
     - [Typography](#typography)
     - [Colour Scheme](#colour-scheme)
     - [Imagery](#imagery)
     - [Social Media Icons](#social-media-icons)
-    - [Favicon](#logo-and-favicon)
-  - [Structure](#structure)
+    - [Favicon](#favicon)
+
+- [**Features**](#features)
+
+  - [**Existing Features**](#existing-features)
     - [Preloader](#preloader)
     - [Main Page](#main-page)
     - [Modals](#modals)
     - [Playground Section](#playground-section)
     - [Result Section](#result-section)
     - [Footer](#footer)
+  - [**Future Features**](#future-features)
+
+- [**Technologies Used**](#technologies-used)
+- [**Testing**](#testing)
+- [**Deployment**](#deployment)
+- [**Credits**](#credits)
+- [**Acknowledgements**](#acknowledgements)
 
 # User Experience UX
 
@@ -56,6 +68,12 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
 Wireframes were designed using [Balsamiq](https://balsamiq.com). Although wireframes show a very basic and simple design, a different result was obtained by modeling ideas and other sources that came to mind during the project development phase.
 
 Wireframes design fils can be find at [Wireframes](assets/wireframes) folder.
+
+[Back to top](#contents)
+
+## Structure
+
+Five Elements Game is a one-page website with a simple design. It provides the user with all the information about the page in simple and relatively less text. From color selection to typeface selection, everything is designed in a way that does not tire the eyes. There are no texts that require long readings. The user is shown how to use the site with short sentences and CTAs in a very simpl way.
 
 [Back to top](#contents)
 
@@ -127,11 +145,13 @@ The background image of the main page is used as the favicon of the page. The fa
 
 [Back to top](#contents)
 
-## Structure
+# Features
 
-Five Elements Game is a one-page website with a simple design. It provides the user with all the information about the page in simple and relatively less text. From color selection to typeface selection, everything is designed in a way that does not tire the eyes.
+Five Elements Game has been designed in such a way that it provides an easily understandable experience to the user. Many potential features can be added and expanded. Five Elements Game is designed to fit user experience design and accessibility practices.
 
 [Back to top](#contents)
+
+## Existing Features
 
 ### Preloader
 
