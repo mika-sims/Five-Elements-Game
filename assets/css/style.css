@@ -261,7 +261,7 @@ h2 {
 .welcome__modal {
   position: relative;
   width: 290px;
-  height: 310px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -338,7 +338,7 @@ h2 {
 /* Round selection modal */
 .round__selection-modal {
   width: 290px;
-  height: 310px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -392,24 +392,24 @@ h2 {
 .rules__modal {
   position: relative;
   width: 290px;
-  height: 310px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding-bottom: 0.5em;
   background: #e9f3ff;
-  gap: 0.5em;
+  gap: 1em;
 }
 
 .rules__modal h2 {
-  font-size: 1em;
+  font-size: 1.2em;
   text-transform: uppercase;
 }
 
 .rules__table {
   border-collapse: collapse;
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 
 .rules__table td,
@@ -427,16 +427,17 @@ th {
 /* Rules modal media query */
 @media screen and (min-width: 600px) {
   .rules__modal {
-    width: 400px;
+    width: 420px;
+    height: 480px;
     gap: 0.5em;
   }
 
   .rules__modal h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   .rules__table {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 
@@ -458,21 +459,21 @@ th {
 
 .game__winner-modal {
   position: relative;
-  height: 310px;
   width: 290px;
+  height: 420px;
   background: #e3f3ff;
   padding: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5em;
+  gap: 1.4em;
   align-items: center;
   text-align: center;
 }
 
 .game__winner-text {
   color: #1b1c47;
-  font-size: 1.1em;
+  font-size: 1em;
   text-transform: uppercase;
   margin-bottom: 1em;
 }
@@ -484,7 +485,7 @@ th {
 
 .new__game-btn,
 .reload__page-btn {
-  font-size: 1em;
+  font-size: 0.9em;
   color: #1b1c47;
   border: 1px solid #454792;
   padding: 0.2em 1em;
