@@ -4,7 +4,9 @@ The Five Elements Game is an extended variation of the classic Rock Paper Scisso
 
 You can view the live site here - \*\* [Five Elements Game](https://mika-sims.github.io/Five-Elements-Game/)
 
-<img src="assets/images/five_elements_game.gif" alt="game promo gif">
+<p align="center">
+<img src="assets/images/five_elements_game.gif" alt="game promo gif" width="600">
+</p>
 
 # Contents
 
@@ -66,15 +68,15 @@ Two fonts are preferred to have a simple design. Fonts are imported using the go
 
 Body background color is a radial-gradient color consisting of the combination of colors with HEX codes #28456b and #1b1c47.
 
-![Body background color](assets/design_files/body_background_color.png)
+<img src="assets/design_files/body_background_color.png" width="600">
 
 The colors of the icons have been chosen by considering the colors corresponding to these elements in nature.
 
-![Icons color codes](assets/design_files/icons_color_code.png)
+<img src="assets/design_files/icons_color_code.png" width="600">
 
 All other colors are used as indicated in the image below.
 
-![Color codes and usage](assets/design_files/color_codes_and_usage.png)
+<img src="assets/design_files/color_codes_and_usage.png" width="600">
 
 [Back to top](#contents)
 
@@ -84,10 +86,10 @@ All other colors are used as indicated in the image below.
 
 I downloaded the SVG image on [this](https://www.mosherhealth.com/mosher-health-system/chinese-medicine/yin-yang/five-elements) site that came across in the Five Element SVG search on Google and opened it with [Figma](https://www.figma.com/). After restyling the icons in Figma, I placed them on the web page. The original image is below.
 
-![Icons original image](assets/design_files/icons_original_img.svg)
+<img src="assets/design_files/icons_original_img.svg" width="600">
 
 - Body background image
 
 I found this image as a result of google searches. The original image was in .jpg format. I converted this image to svg format using [this](https://convertio.co/jpg-svg/) site and then re-styled it with Figma. The original image is below.
 
-![Icons original image](assets/design_files/body_bg_img_original.png)
+<img src="assets/design_files/body_bg_img_original.png" width="200">
