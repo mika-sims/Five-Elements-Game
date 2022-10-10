@@ -98,4 +98,4 @@ I found this image as a result of google searches. The original image was in .jp
 
 I designed the image with a dotted border and a star inside the circle in the background of the game board in figma and imported it as SVG.
 
-<img src="assets/images/playground_bg.svg" width="200">
+<img src="assets/design_files/gameboard_bg.png" width="200">
