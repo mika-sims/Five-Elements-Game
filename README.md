@@ -14,7 +14,7 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
 
   - [User Stories](#user-stories)
   - [Wireframes](#wireframes)
-  - [Structure](#structure)
+  - [Site Structure](#site-structure)
   - [Design](#design)
     - [Typography](#typography)
     - [Colour Scheme](#colour-scheme)
@@ -71,7 +71,7 @@ Wireframes design fils can be find at [Wireframes](assets/wireframes) folder.
 
 [Back to top](#contents)
 
-## Structure
+## Site Structure
 
 Five Elements Game is a one-page website with a simple design. It provides the user with all the information about the page in simple and relatively less text. From color selection to typeface selection, everything is designed in a way that does not tire the eyes. There are no texts that require long readings. The user is shown how to use the site with short sentences and CTAs in a very simpl way.
 
@@ -83,7 +83,7 @@ The page design has emerged as a result of a long-term research. The main design
 
 [Back to top](#contents)
 
-### Typography
+- ### Typography
 
 Two fonts are preferred to have a simple design. Fonts are imported using the googlefonts API. "Poppins" is used in the body of the page and in all CTAs, "Roboto Condensed" in all titles, and the sans-serif font family is used as the fallback of both fonts.
 
@@ -186,6 +186,8 @@ After clicking the LET'S START button on the main page, the greeting modal opens
 </details>
 <br>
 
+[Back to top](#contents)
+
 - Rules Modal
 
 The rules modal presents the rules of the game in a table. The table has three columns and 11 rows. İlk satırda mağlubiyet, mağlubiyet ve bu iki başlık arasında mağlubiyetin hangi yöntemi kullandığını gösteren yer almaktadır. When the x-mark in the modal or outside the modal is clicked, the rules modal is closed. After the rules modal is closed, the greeting modal reappears. As in the rules modal, clicking the x-mark or outside of the modal in greeting modal closes the modal and moves to the next section.
@@ -196,6 +198,8 @@ The rules modal presents the rules of the game in a table. The table has three c
 </details>
 <br>
 
+[Back to top](#contents)
+
 - Round Selection Modal
 
 In this modal, the user is given three options for how many rounds they want to complete the game. The background of the item showing the selected number of rounds changes to a reddish color. If the PLAY button is clicked after the option is selected or without the option being selected, the playground section will be opened. If the user presses the PLAY button without choosing how many rounds to play, the game will be 3 Rounds by default. In order to close this model, it is necessary to click the PLAY button.
@@ -205,6 +209,8 @@ In this modal, the user is given three options for how many rounds they want to 
 <img src="assets/design_files/rounds_selection_modal.png" width="300">
 </details>
 <br>
+
+[Back to top](#contents)
 
 - Game Winner Modal
 
@@ -251,3 +257,34 @@ In the footer section there are only two icons showing social media accounts. Th
 <img src="assets/design_files/footer.png" width="300">
 </details>
 <br>
+
+[Back to top](#contents)
+
+## Future Features
+
+It is possible to improve the Five Elements Game. Below is a list of potential features that could be added.
+
+- The game can be played online with another user.
+- The ability to write a username can be added while playing with another user.
+- Rather than 3-5-7 roundad options, an input option can be offered where the user enters the number of rounds
+- After the selections are made, an animation can be added showing the selections fighting in the middle of the game board.
+- After the user starts the game, a timer can be added that requires the user to choose within a certain time. If the user does not make a choice within this time, they lose the round.
+
+[Back to top](#contents)
+
+# Technologies Used
+
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5) - Provides the content and structure for the website.
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Provides the styling for the website.
+- [JavaScript](https://www.javascript.com/) - Provides the site interactivity and functionality.
+- [Visual Studio Code](https://code.visualstudio.com/) - A standalone source code editor was used to edit and build the site.
+- [GitHub](https://github.com/) - Used to create the project repository and monitor changes.
+- [Git](https://git-scm.com/) - Was used as the version control system in the terminal.
+- [Chrome DevTools](https://developers.google.com/web/tools) was used during the development phase of the website for debugging and responsiveness, and to test performance and accessibility on different screen sizes.
+- [Google Fonts](https://fonts.google.com/) was used to determine the fonts and to import them via Google Fonts application programming interface (API) link.
+- [Animate.css](https://animate.style/) - CSS animation library. It was used to perform the animations on the site.
+- [Balsamiq](https://balsamiq.com/) - Was used to design the wireframes of the website.
+- [Figma](https://www.figma.com/) - Used to design and edit all images.
+- [Am I Responsive](https://ui.dev/amiresponsive) was used to take screenshots of the website in different screen sizes.
+
+[Back to top](#contents)
