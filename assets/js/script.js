@@ -42,7 +42,7 @@ let userScore = 0;
 let cpuScore = 0;
 
 /*========== EVENT LISTENERS ==========*/
-window.addEventListener("resize", screenSizewarning);
+window.addEventListener("resize", screenSizeWarning);
 rulesButtons.forEach((rulesBtn) =>
   rulesBtn.addEventListener("click", openRulesModal)
 );
@@ -73,12 +73,15 @@ const options = {
 /**
  * Check creen hight and show the warning message on screens less than 440px high(probably landscape mode)
  */
-function screenSizewarning() {
-  let landscape = window.screen.availWidth > window.screen.availHeight;
-  let device = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  let minHeight = screen.availHeight < 480;
+function screenSizeWarning() {
 
-  if (device && landscape && minHeight) {
+  let isIphone = window.navigator.userAgent.includes("iPhone");
+  let isLandscape = window.screen.orientation.type === 'landscape-primary';
+  let minHeight = window.screen.availHeight < 460;
+
+  if (isIphone && minHeight && isLandscape) {
+    warningMessage.classList.remove("hide");
+  } else if (minHeight && isLandscape) {
     warningMessage.classList.remove("hide");
   } else {
     warningMessage.classList.add("hide");
