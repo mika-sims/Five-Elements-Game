@@ -18,7 +18,14 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
     - [Colour Scheme](#colour-scheme)
     - [Imagery](#imagery)
     - [Social Media Icons](#social-media-icons)
-    - [Logo and Favicon](#logo-and-favicon)
+    - [Favicon](#logo-and-favicon)
+  - [Structure](#structure)
+    - [Preloader](#preloader)
+    - [Main Page](#main-page)
+    - [Playground Section](#playground-section)
+    - [Result Section](#result-section)
+    - [Modals](#modals)
+    - [Footer](#footer)
 
 # User Experience UX
 
@@ -99,3 +106,31 @@ I found this image as a result of google searches. The original image was in .jp
 I designed the image with a dotted border and a star inside the circle in the background of the game board in figma and imported it as SVG.
 
 <img src="assets/design_files/gameboard_bg.png" width="200">
+
+[Back to top](#contents)
+
+### Social Media Icons
+
+Social media icons are used in Figma by importing them into Figma using the [Iconify](https://www.figma.com/community/plugin/735098390272716381/Iconify) plugin and changing their colors.
+
+[Back to top](#contents)
+
+### Favicon
+
+The background image of the main page is used as the favicon of the page. The favicon images and links that can be compatible with different devices are produced using the [Real Favicon Generator](https://realfavicongenerator.net/) web site.
+
+[Back to top](#contents)
+
+## Structure
+
+Five Elements Game is a one-page website with a simple design. It provides the user with all the information about the page in simple and relatively less text. From color selection to typeface selection, everything is designed in a way that does not tire the eyes.
+
+[Back to top](#contents)
+
+### Preloader
+
+Preloader is an animation in which the game icons are shown to the user at the page opening, rather than a preloader in the full sense. The "Loading..." text under the icons is also presented to the user to create the impression that the page is loading. However, taking longer than a normal preloader loading, may makes questioning whether this feature is necessary. But still, this is intended as part of the page's design rather than a page preloader.
+
+<img src="assets/design_files/preloader.gif">
+
+[Back to top](#contents)
