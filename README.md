@@ -288,3 +288,56 @@ It is possible to improve the Five Elements Game. Below is a list of potential f
 - [Am I Responsive](https://ui.dev/amiresponsive) was used to take screenshots of the website in different screen sizes.
 
 [Back to top](#contents)
+
+# Testing
+
+All code files have been verified via W3C HTML Validator, W3C CSS Validator and JSHint Validator. A few warnings were encountered in the HTML file and they were fixed immediately. Below are screenshots showing the HTML warnings and their corrected versions.
+
+### HTML Validation
+
+- First HTML warning
+<details>
+<summary>See image</summary>
+<img src="assets/validation_screenshots/html_validation_1.png" width="600">
+</details>
+<br>
+
+- First HTML warning (fixed)
+<details>
+<summary>See image</summary>
+<img src="assets/validation_screenshots/html_validation_1_fixed.png" width="600">
+</details>
+<br>
+
+- Second HTML warning
+
+Lots of warnings due to slashes in `<img>` tags. After deleting the slashes all warnings disappeared.
+
+<details>
+<summary>See image</summary>
+<img src="assets/validation_screenshots/html_validation_2.png" width="600">
+</details>
+<br>
+
+- Second HTML warning (fixed)
+<details>
+<summary>See image</summary>
+<img src="assets/validation_screenshots/html_validation_2_fixed.png" width="600">
+</details>
+<br>
+
+### CSS Validation
+
+There are no errors related to CSS.
+
+<details>
+<summary>See image</summary>
+<img src="assets/validation_screenshots/css_validation_1.png" width="600">
+</details>
+<br>
+
+### JavaScript Validation
+
+While writing the JS code, all the errors were fixed while writing the code, as I had loaded JSHint, which is an extension of VS Code.
+
+[Back to top](#contents)
