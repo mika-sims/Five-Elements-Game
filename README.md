@@ -35,6 +35,10 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
 
 - [**Technologies Used**](#technologies-used)
 - [**Testing**](#testing)
+  - [Responsiveness Testing](#responsiveness-testing)
+  - [Lighthouse Tests](#lighthouse-tests)
+  - [Browser Compatibility](#browser-compatibility)
+- [**Bugs**](#bugs)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
 - [**Acknowledgements**](#acknowledgements)
@@ -291,7 +295,7 @@ It is possible to improve the Five Elements Game. Below is a list of potential f
 
 # Testing
 
-All code files have been verified via W3C HTML Validator, W3C CSS Validator and JSHint Validator. A few warnings were encountered in the HTML file and they were fixed immediately. Below are screenshots showing the HTML warnings and their corrected versions.
+All code files have been verified via [W3C HTML Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [JSHint Validator](https://jshint.com/). A few warnings were encountered in the HTML file and they were fixed immediately. Below are screenshots showing the HTML warnings and their corrected versions.
 
 ### HTML Validation
 
@@ -341,3 +345,41 @@ There are no errors related to CSS.
 While writing the JS code, all the errors were fixed while writing the code, as I had loaded JSHint, which is an extension of VS Code.
 
 [Back to top](#contents)
+
+## Responsiveness Testing
+
+The webpage has been tested for responsiveness on multiple physical devices and through the Chrome Developer Tools, [Am I Responsive](https://ui.dev/amiresponsive?url=https://mika-sims.github.io/Five-Elements-Game/), and [Responsive Design Checker](https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Fmika-sims.github.io%2FFive-Elements-Game%2F&width=1400&height=700).Responsiveness tests have been tested with all devices available on the Responsive Design Checker site. No errors were found in the layout, appearance or functionality on any device. Screenshots of Am I Responsive tests are below.
+
+<details>
+<summary>See screenshots</summary>
+<img src="assets/validation_screenshots/amI_esponsiveness_1.png" width="600">
+<img src="assets/validation_screenshots/amI_esponsiveness_2.png" width="600">
+<img src="assets/validation_screenshots/amI_esponsiveness_3.png" width="600">
+<img src="assets/validation_screenshots/amI_esponsiveness_4.png" width="600">
+<img src="assets/validation_screenshots/amI_esponsiveness_5.png" width="600">
+<img src="assets/validation_screenshots/amI_esponsiveness_6.png" width="600">
+</details>
+P.S. : There was only one bug that will be mentioned in the bugs section.
+<br>
+
+[Back to top](#contents)
+
+## Lighthouse Tests
+
+Page was tested with Chrome Dev Tools - Lighthouse for performance, accessibility, best practices, and SEO. The site passed all the tested criteria. The reason why the performance ratio for mobile devices is a little low compared to the performance ratio of desktop devices is the high visual content on the site.
+
+<details>
+<summary>See Lighthouse test screenshot for mobile</summary>
+<img src="assets/validation_screenshots/lighthouse_test_mobile.png" width="400">
+</details>
+<br>
+
+<details>
+<summary>See Lighthouse test screenshot for desktop</summary>
+<img src="assets/validation_screenshots/lighthouse_test_desktop.png" width="400">
+</details>
+<br>
+
+## Browser Compatibility
+
+The page has been tested in multiple different browsers to check for compatibility issues. Browser compatibility tests on Google Chrome, Safari, and Firefox were performed with no apparent issues with layout, appearance, or functionality.
