@@ -17,7 +17,7 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
     - [Typography](#typography)
     - [Colour Scheme](#colour-scheme)
     - [Imagery](#imagery)
-    - [Icons and Illustrations](#icons-and-illustrations)
+    - [Social Media Icons](#social-media-icons)
     - [Logo and Favicon](#logo-and-favicon)
 
 # User Experience UX
@@ -88,8 +88,14 @@ I downloaded the SVG image on [this](https://www.mosherhealth.com/mosher-health-
 
 <img src="assets/design_files/icons_original_img.svg" width="600">
 
-- Body background image
+- Main page background image
 
 I found this image as a result of google searches. The original image was in .jpg format. I converted this image to svg format using [this](https://convertio.co/jpg-svg/) site and then re-styled it with Figma. The original image is below.
 
 <img src="assets/design_files/body_bg_img_original.png" width="200">
+
+- Game board background image
+
+I designed the image with a dotted border and a star inside the circle in the background of the game board in figma and imported it as SVG.
+
+<img src="assets/images/playground_bg.svg" width="200">
