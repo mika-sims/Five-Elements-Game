@@ -380,6 +380,37 @@ Page was tested with Chrome Dev Tools - Lighthouse for performance, accessibilit
 </details>
 <br>
 
+[Back to top](#contents)
+
 ## Browser Compatibility
 
 The page has been tested in multiple different browsers to check for compatibility issues. Browser compatibility tests on Google Chrome, Safari, and Firefox were performed with no apparent issues with layout, appearance, or functionality.
+
+[Back to top](#contents)
+
+# Bugs
+
+# Deployment
+
+VS Code, GitHub and Git were used in the deployment process of the website. To make the project live, the website was deployed to GitHub pages. The stages of the deployment took place as follows.
+
+# Credits
+
+# Acknowledgements
+
+I would like to thanks;
+
+to Code Institute for course content,
+to my mentor Precious Ijege for guiding me,
+to Cuneyt Ergun, for project review,
+to Alistair Cohen, for testing the game and giving feedback,
+
+and to Code Institute's Slack community:
+
+- Dave Horrocks
+- Hiwa Awrel
+- Anna Gabain
+- Gerard Kelly
+- Jamie King
+
+for their comments, ideas and contributions to the development of the project.
