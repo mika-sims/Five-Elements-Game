@@ -434,6 +434,10 @@ VS Code, GitHub and Git were used in the deployment process of the website. To m
 
 I used GitHub pages for the deployment of the project. To deploy a GitHub page, see the [GitHub deployment](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) documentation.
 
+- ## Fork GitHub repo
+
+To fork a GitHub repo, see the [Fork a GitHub repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) documentation.
+
 <details>
 <summary>See screenshots of GitHub repo cloning</summary>
 <img src="assets/github_documentation/clone_repo_01.png" width="300"><br>
@@ -442,6 +446,14 @@ I used GitHub pages for the deployment of the project. To deploy a GitHub page, 
 <br>
 
 # Credits
+
+- Ideas and rules about the game are taken from [this](https://sinclairinternalarts.com/five-element-theory-vs-rock-paper-scissors-lizard-spock/) site.
+
+-The idea for the design was taken from the [Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)'s Rock Paper Scissors challenge.
+
+- The idea of displaying a warning message in landscape mode was inspired by the project of [Mike](https://github.com/MikeR94/CI-Project-Portfolio-2), who is also a Code Institute student.
+
+- Subject researches related to Javascript were made from [The MDN Web Docs](https://developer.mozilla.org/en-US/).
 
 # Acknowledgements
 
