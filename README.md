@@ -475,7 +475,6 @@ to Alistair Cohen, for testing the game and giving feedback,
 and to Code Institute's Slack community:
 
 - Dave Horrocks
-- Hiwa Awrel
 - Anna Gabain
 - Gerard Kelly
 - Jamie King
