@@ -449,13 +449,6 @@ I used GitHub pages for the deployment of the project. To deploy a GitHub page, 
 
 To fork a GitHub repo, see the [Fork a GitHub repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) documentation.
 
-<details>
-<summary>See screenshots of GitHub repo cloning</summary>
-<img src="assets/github_documentation/clone_repo_01.png" width="300"><br>
-<img src="assets/github_documentation/clone_repo_02.png" width="300"><br>
-</details>
-<br>
-
 [Back to top](#contents)
 
 # Credits
