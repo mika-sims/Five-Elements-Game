@@ -40,6 +40,9 @@ You can view the live site here - \*\* [Five Elements Game](https://mika-sims.gi
   - [Browser Compatibility](#browser-compatibility)
 - [**Bugs**](#bugs)
 - [**Deployment**](#deployment)
+  - [Create GitHub repository](#create-github-repository)
+  - [Deploy GitHub Page](#deploy-github-page)
+  - [Fork GitHub Repository](#fork-github-repository)
 - [**Credits**](#credits)
 - [**Acknowledgements**](#acknowledgements)
 
@@ -394,6 +397,8 @@ The application has an unresolved bug. Since the game area does not fit on the s
 
 However, in all tests made in the Google Developer Tool, a modal with a warning message was displayed. Below is the screenshot of the test made with the Developer Tool iPhone 4.
 
+[Back to top](#contents)
+
 <details>
 <summary>See Lighthouse test screenshot for desktop</summary>
 <img src="assets/validation_screenshots/warning_message.png" width="400">
@@ -404,9 +409,11 @@ However, in all tests made in the Google Developer Tool, a modal with a warning 
 
 A JS library can be used to detect all devices, the browsers they use, and whether the device is used in landscape or portrait mode. Like [detect.js](https://github.com/darcyclarke/Detect.js/) or [mobile-detect.js](http://hgoebl.github.io/mobile-detect.js/).
 
+[Back to top](#contents)
+
 # Deployment
 
-- ### Create GitHub repository
+- ### Create GitHub Repository
 
 VS Code, GitHub and Git were used in the deployment process of the website. To make the project live, the website was deployed to GitHub pages. The stages of the deployment took place as follows.
 
@@ -430,11 +437,15 @@ VS Code, GitHub and Git were used in the deployment process of the website. To m
 
 3. I opened the repo that was cloned to my computer with VS Code.
 
-- ## Deployment of the project
+[Back to top](#contents)
+
+- ## Deploy GitHub Page
 
 I used GitHub pages for the deployment of the project. To deploy a GitHub page, see the [GitHub deployment](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) documentation.
 
-- ## Fork GitHub repo
+[Back to top](#contents)
+
+- ## Fork GitHub Repository
 
 To fork a GitHub repo, see the [Fork a GitHub repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) documentation.
 
@@ -445,6 +456,8 @@ To fork a GitHub repo, see the [Fork a GitHub repo](https://docs.github.com/en/g
 </details>
 <br>
 
+[Back to top](#contents)
+
 # Credits
 
 - Ideas and rules about the game are taken from [this](https://sinclairinternalarts.com/five-element-theory-vs-rock-paper-scissors-lizard-spock/) site.
@@ -454,6 +467,8 @@ To fork a GitHub repo, see the [Fork a GitHub repo](https://docs.github.com/en/g
 - The idea of displaying a warning message in landscape mode was inspired by the project of [Mike](https://github.com/MikeR94/CI-Project-Portfolio-2), who is also a Code Institute student.
 
 - Subject researches related to Javascript were made from [The MDN Web Docs](https://developer.mozilla.org/en-US/).
+
+[Back to top](#contents)
 
 # Acknowledgements
 
@@ -473,3 +488,5 @@ and to Code Institute's Slack community:
 - Jamie King
 
 for their comments, ideas and contributions to the development of the project.
+
+[Back to top](#contents)
