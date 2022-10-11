@@ -390,9 +390,56 @@ The page has been tested in multiple different browsers to check for compatibili
 
 # Bugs
 
+The application has an unresolved bug. Since the game area does not fit on the screen when the application is opened in landscape mode on mobile phones, an attempt was made to display a modal that displays a warning message when the user tries to view the application in landscape mode. However, although this warning message appeared on Android phones in manual tests, it did not appear on Apple phones.
+
+However, in all tests made in the Google Developer Tool, a modal with a warning message was displayed. Below is the screenshot of the test made with the Developer Tool iPhone 4.
+
+<details>
+<summary>See Lighthouse test screenshot for desktop</summary>
+<img src="assets/validation_screenshots/warning_message.png" width="400">
+</details>
+<br>
+
+- Solution suggestion
+
+A JS library can be used to detect all devices, the browsers they use, and whether the device is used in landscape or portrait mode. Like [detect.js](https://github.com/darcyclarke/Detect.js/) or [mobile-detect.js](http://hgoebl.github.io/mobile-detect.js/).
+
 # Deployment
 
+- ### Create GitHub repository
+
 VS Code, GitHub and Git were used in the deployment process of the website. To make the project live, the website was deployed to GitHub pages. The stages of the deployment took place as follows.
+
+1. First I created a repo on GitHub called Five-Elements-Game. There are several ways to create a GitHub repo.
+<details>
+<summary>See screenshots of GitHub repo creation</summary>
+<img src="assets/github_documentation/create_repo_01.png" width="200"><br>
+<img src="assets/github_documentation/create_repo_02.png" width="200"><br>
+<img src="assets/github_documentation/create_repo_03.png" width="200"><br>
+<img src="assets/github_documentation/create_repo_04.png" width="200">
+</details>
+<br>
+
+2. I cloned the repo using Git Bash to my computer using 'git clone' command.
+<details>
+<summary>See screenshots of GitHub repo cloning</summary>
+<img src="assets/github_documentation/clone_repo_01.png" width="300"><br>
+<img src="assets/github_documentation/clone_repo_02.png" width="300"><br>
+</details>
+<br>
+
+3. I opened the repo that was cloned to my computer with VS Code.
+
+- ## Deployment of the project
+
+I used GitHub pages for the deployment of the project. To deploy a GitHub page, see the [GitHub deployment](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) documentation.
+
+<details>
+<summary>See screenshots of GitHub repo cloning</summary>
+<img src="assets/github_documentation/clone_repo_01.png" width="300"><br>
+<img src="assets/github_documentation/clone_repo_02.png" width="300"><br>
+</details>
+<br>
 
 # Credits
 
