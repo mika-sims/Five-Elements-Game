@@ -467,17 +467,17 @@ To fork a GitHub repo, see the [Fork a GitHub repo](https://docs.github.com/en/g
 
 I would like to thanks;
 
-to Code Institute for course content,
-to my mentor Precious Ijege for guiding me,
-to Cuneyt Ergun, for project review,
-to Alistair Cohen, for testing the game and giving feedback,
+to [Code Institute](https://codeinstitute.net/global/) for course content,
+to my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for guiding me,
+to [Cuneyt Ergun](https://www.linkedin.com/in/cuneytergun/), for project review,
+to [Alistair Cohen](https://www.linkedin.com/in/amcohen/), for testing the game and giving feedback,
 
 and to Code Institute's Slack community:
 
-- Dave Horrocks
-- Anna Gabain
-- Gerard Kelly
-- Jamie King
+- [Dave Horrocks](https://www.linkedin.com/in/davejhorrocks/)
+- [Anna Gabain](https://www.linkedin.com/in/annagabain/)
+- [Gerard Kelly](https://www.linkedin.com/in/gerard-kelly-dev/)
+- [Jamie King](https://www.linkedin.com/in/jamie-king-25938123/)
 
 for their comments, ideas and contributions to the development of the project.
 
